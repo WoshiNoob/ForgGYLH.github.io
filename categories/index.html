@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https//:ForgGYLH.github.io">
-  <title>进来坐坐呗~</title>
+  <title>categories | 进来坐坐呗~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Hachi赛高">
 <meta property="og:type" content="website">
-<meta property="og:title" content="进来坐坐呗~">
-<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;categories&#x2F;index.html">
 <meta property="og:site_name" content="进来坐坐呗~">
 <meta property="og:description" content="Hachi赛高">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-03T12:44:40.135Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="进来坐坐呗~" type="application/atom+xml">
@@ -155,65 +156,117 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-LuoGuP1470【最长前缀LongestPrefix】" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/04/LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91/">LuoGuP1470【最长前缀LongestPrefix】</a>
+    <h1 class="article-title" itemprop="name">
+      categories
     </h1>
   
 
         
-        <a href="/2019/11/04/LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91/" class="archive-article-date">
-  	<time datetime="2019-11-04T09:54:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
+        <a href="/categories/index.html" class="archive-article-date">
+  	<time datetime="2019-10-31T10:44:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>（<del>反正题解没人看 就提供个思路吧</del>）</p>
-<p>Trie+DFS 每搜到一个节点看它是不是一个单词的终点，是就加一个搜索路径，不是就按照Trie的Find()模板进行DFS. 优化：记得加vis数组进行记忆化搜索，不然会有重复情况会TLE。</p>
-<p>上代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">5050</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">int</span> tree[maxn][<span class="number">30</span>];</span><br><span class="line"><span class="keyword">bool</span> vis[<span class="number">2020</span>][<span class="number">200020</span>];</span><br><span class="line"><span class="keyword">int</span> ed[maxn];</span><br><span class="line"><span class="keyword">char</span> que[<span class="number">200020</span>];</span><br><span class="line"><span class="keyword">char</span> ch[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> n,cnt,Len;</span><br><span class="line"><span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">newnode</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">26</span>;i++)&#123;</span><br><span class="line">        tree[cnt][i]=<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ed[cnt]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> cnt++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cnt=<span class="number">0</span>;</span><br><span class="line">    newnode();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len=<span class="built_in">strlen</span>(ch);</span><br><span class="line">    <span class="keyword">int</span> root=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> x=ch[i]-<span class="string">'A'</span>;</span><br><span class="line">        <span class="keyword">if</span>(tree[root][x]&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">            tree[root][x]=newnode();</span><br><span class="line">        &#125;</span><br><span class="line">        root=tree[root][x];</span><br><span class="line">    &#125;</span><br><span class="line">    ed[root]=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(vis[pos][len]) <span class="keyword">return</span>;</span><br><span class="line">    vis[pos][len]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> x=que[len]-<span class="string">'A'</span>;</span><br><span class="line">    <span class="keyword">if</span>(ed[pos])&#123;</span><br><span class="line">        ans=max(ans,len);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(len==Len)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(tree[pos][x]!=<span class="number">-1</span>)&#123;</span><br><span class="line">        dfs(tree[pos][x],len+<span class="number">1</span>);</span><br><span class="line">    &#125;<span class="keyword">if</span>(ed[pos])&#123;</span><br><span class="line">        dfs(<span class="number">0</span>,len);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%s"</span>,ch)&amp;&amp;<span class="built_in">strcmp</span>(ch,<span class="string">"."</span>))&#123;</span><br><span class="line">        insert();</span><br><span class="line">    &#125;</span><br><span class="line">    Len=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%s"</span>,que+Len)!=EOF)&#123;</span><br><span class="line">        Len=<span class="built_in">strlen</span>(que);</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+        
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题解</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/04/LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91/">展开全文 >></a>
-        </p>
-      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3a227CQAwFQP7/p6nU14hwbJNWOJMnlKbZHSq568vjEV/P3+t453j//Kevnk/e+YELAwPjaxnP0+u4fLK5V+9Jnjl+Pt8bBgbGfRjnQTYJlMlXU/1Skr1hYGBgVAPoZ+9jYGBgXPG6avA9T2IxMDAwqklsnmrmm/uHXBwDA+MLGdXGwF9+vrC/gYGB8SWM5/jqlc+SsF7YAwYGxmpGb8ShCps0SguBGAMDYymjVwKbHzGTtxUGyDAwMFYzqg9V70yCck7CwMC4AyMp6OcF+smYV2+YAwMDYzejGvKq5bakzdlrYWJgYNyNUf21fCtJqpkE7jcrYmBgrGbkpavrWpuTAygGBsYdGNVgWh2q6B0Ky2U+DAyM1Yy8KFYNo5PUt/c2DAyM3Yzk0XwgY4LMxy+ivwMGBsYNGMlRbNKwLG/0/A0YGBhLGb10MQ++vdS0OpyBgYGxm5G3FSclsISUr54fJTEwMPYx8lS2t9ioy5oHXAwMjKWMXlF+XkSrfjXRfwkMDIzVjOqY16TxmQ9nRAMWGBgYN2D00sg8dPbaos1GJgYGxjrGfLHqk710903IxsDAWM2YhLleazN5vhroMTAw7sCopq/zhLNXsMPAwMCoZr2TRLcc75O2AQYGBkZQq+slvdWC3cs9YGBgYMTjXNUSWx6ao24GBgbGakYS4PKFq62C6PCXnxwxMDDWMSaNgbzQdt3oBgYGxmrGD/b8+gg8qoCfAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -233,85 +286,14 @@
 
 
 
-
   
-    <article id="post-我来辣-ToDoList" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/04/%E6%88%91%E6%9D%A5%E8%BE%A3-ToDoList/">我来辣-ToDoList</a>
-    </h1>
   
 
-        
-        <a href="/2019/11/04/%E6%88%91%E6%9D%A5%E8%BE%A3-ToDoList/" class="archive-article-date">
-  	<time datetime="2019-11-04T09:51:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>断断续续搞了两三天，终于是完工了，可以开始写博客了。</p>
-        
-          <a class="article-more-a" href="/2019/11/04/%E6%88%91%E6%9D%A5%E8%BE%A3-ToDoList/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/04/%E6%88%91%E6%9D%A5%E8%BE%A3-ToDoList/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -334,7 +316,7 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
 		isTag: false,
