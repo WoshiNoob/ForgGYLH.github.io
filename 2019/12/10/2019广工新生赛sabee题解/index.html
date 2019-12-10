@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      2019广工新生赛sabee题解 | 我们都有光明的前途 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="FrogG_YLH.">
+    
+    
+
+    <meta name="description" content="suibianxiexie A-原初的信纸 题目链接 签到成功，这是你的签到奖励.jpg  123456789101112131415161718#include&amp;lt;bits&#x2F;stdc++.h&amp;gt;using namespace std;typedef long long ll;const int maxn=2e5+50;int a[maxn];void solve()&amp;#123;	int">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019广工新生赛sabee题解 | 我们都有光明的前途">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;12&#x2F;10&#x2F;2019%E5%B9%BF%E5%B7%A5%E6%96%B0%E7%94%9F%E8%B5%9Bsabee%E9%A2%98%E8%A7%A3&#x2F;index.html">
+<meta property="og:site_name" content="我们都有光明的前途">
+<meta property="og:description" content="suibianxiexie A-原初的信纸 题目链接 签到成功，这是你的签到奖励.jpg  123456789101112131415161718#include&amp;lt;bits&#x2F;stdc++.h&amp;gt;using namespace std;typedef long long ll;const int maxn=2e5+50;int a[maxn];void solve()&amp;#123;	int">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png">
+<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png">
+<meta property="og:image" content="file:&#x2F;&#x2F;&#x2F;C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png">
+<meta property="og:updated_time" content="2019-12-10T11:58:24.526Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="file:&#x2F;&#x2F;&#x2F;C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">我们都有光明的前途</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          一只数论自闭字符串不会的菜狗
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">2019广工新生赛sabee题解</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2019-12-10" class="post-meta__date date">2019-12-10</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <hr>
+<p>suibianxiexie</p>
+<p>A-原初的信纸</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/A" target="_blank" rel="noopener">题目链接</a></p>
+<p>签到成功，这是你的签到奖励.jpg <img src="file:///C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png" alt="img"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);<span class="keyword">int</span> mx=<span class="number">0</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">		mx=max(mx,a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,mx);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		solve();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: *500</p>
+<p>B-骑士的对决</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/B" target="_blank" rel="noopener">题目链接</a></p>
+<p>签到成功，这是你的签到奖励.jpg <img src="file:///C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png" alt="img"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> a,b,c,d;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c%c%c%c"</span>,&amp;a,&amp;b,&amp;c,&amp;d);</span><br><span class="line">	<span class="keyword">if</span>(d==<span class="string">'S'</span>&amp;&amp;a==<span class="string">'S'</span>&amp;&amp;b==<span class="string">'J'</span>||d==<span class="string">'S'</span>&amp;&amp;a==<span class="string">'J'</span>&amp;&amp;b==<span class="string">'S'</span>||d==<span class="string">'J'</span>&amp;&amp;a==<span class="string">'B'</span>&amp;&amp;b==<span class="string">'J'</span>||d==<span class="string">'J'</span>&amp;&amp;a==<span class="string">'J'</span>&amp;&amp;b==<span class="string">'B'</span>||d==<span class="string">'B'</span>&amp;&amp;a==<span class="string">'B'</span>&amp;&amp;b==<span class="string">'S'</span>||d==<span class="string">'B'</span>&amp;&amp;a==<span class="string">'S'</span>&amp;&amp;b==<span class="string">'B'</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"lyrnb"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"pmznb"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: game *600</p>
+<p>C-秘密的议会</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/C" target="_blank" rel="noopener">题目链接</a></p>
+<p>签到成功，这是你的签到奖励.jpg <img src="file:///C:%5CUsers%5CADMINI~1%5CAppData%5CLocal%5CTemp%5CSGPicFaceTpBq%5C6436%5C07A4E0B1.png" alt="img"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch[<span class="number">110</span>];</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>,ch);</span><br><span class="line">	<span class="keyword">int</span> n=<span class="built_in">strlen</span>(ch);</span><br><span class="line">	<span class="keyword">int</span> cnt1=<span class="number">0</span>;<span class="keyword">int</span> cnt2=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(ch[i]==<span class="string">'Y'</span>||ch[i]==<span class="string">'y'</span>)&#123;</span><br><span class="line">			cnt1++;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'N'</span>||ch[i]==<span class="string">'n'</span>)&#123;</span><br><span class="line">			cnt2++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(cnt1&gt;=n/<span class="number">2</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"pmznb\n"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(cnt2&gt;=n/<span class="number">2</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"lyrnb\n"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"wsdd\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">	<span class="keyword">while</span>(t--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: *600</p>
+<p>D-城市的税金</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/D" target="_blank" rel="noopener">题目链接</a></p>
+<p>按题意模拟即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line">ll a[maxn];</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="function">ll <span class="title">fun</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x*<span class="number">251</span>%<span class="number">996</span>*<span class="number">404</span>*<span class="number">123</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="built_in">map</span>&lt;ll,<span class="keyword">int</span>&gt;mp;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(m--)&#123;</span><br><span class="line">		ll op,b,c;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld%lld%lld"</span>,&amp;op,&amp;b,&amp;c);</span><br><span class="line">		<span class="keyword">if</span>(op==<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=b;i&lt;=c;i++)&#123;</span><br><span class="line">				a[i]=fun(a[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			mp.clear();<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=b;i&lt;=c;i++)&#123;</span><br><span class="line">				mp[a[i]]++;</span><br><span class="line">				ans=max(ans,mp[a[i]]);</span><br><span class="line">			&#125; </span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: implementation data strcutres *700</p>
+<p>E-缺席的神官</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/E" target="_blank" rel="noopener">题目链接</a></p>
+<p>基础贪心，将工作日之间的间隔加入优先队列，取前k个即可。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line">ll a[maxn];</span><br><span class="line"><span class="keyword">int</span> n,m,k;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;k);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">	sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">int</span> sum=a[n]-a[<span class="number">1</span>]+<span class="number">1</span>;</span><br><span class="line">	priority_queue&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">		q.push(a[i+<span class="number">1</span>]-a[i]<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	k--;</span><br><span class="line">	<span class="keyword">while</span>(k--)&#123;</span><br><span class="line">		sum-=q.top();q.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: greedy *1000</p>
+<p>F-失踪的玫瑰</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/F" target="_blank" rel="noopener">题目链接</a></p>
+<p>待补</p>
+<p>tags:math *2200</p>
+<p>G-虚数的纸牌</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/G" target="_blank" rel="noopener">题目链接</a></p>
+<p>sb模拟题，按题意模拟即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f1</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x==<span class="number">4</span>) <span class="keyword">return</span> <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">if</span>(x==<span class="number">3</span>) <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">	<span class="keyword">if</span>(x==<span class="number">2</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f2</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x==<span class="number">4</span>) <span class="keyword">return</span> <span class="number">4</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">char</span> ch[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> cnt[<span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>,ch);</span><br><span class="line">	<span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</span><br><span class="line">	<span class="keyword">int</span> n=<span class="built_in">strlen</span>(ch);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(ch[i]&gt;=<span class="string">'3'</span>&amp;&amp;ch[i]&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">			cnt[ch[i]-<span class="string">'3'</span>]++;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'0'</span>) cnt[<span class="number">7</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'A'</span>) cnt[<span class="number">11</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'2'</span>) cnt[<span class="number">12</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'J'</span>) cnt[<span class="number">8</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'Q'</span>) cnt[<span class="number">9</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(ch[i]==<span class="string">'K'</span>) cnt[<span class="number">10</span>]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">17</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">12</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(cnt[i]&gt;=<span class="number">2</span>)&#123;</span><br><span class="line">			ans+=f1(cnt[i]);</span><br><span class="line">		&#125;<span class="keyword">if</span>(cnt[i]&gt;=<span class="number">3</span>)&#123;</span><br><span class="line">			ans+=f2(cnt[i])*(<span class="number">17</span>-cnt[i]);</span><br><span class="line">			<span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">12</span>;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(i==j) <span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">if</span>(cnt[j]&gt;=<span class="number">2</span>)&#123;</span><br><span class="line">					res+=f1(cnt[j]);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			ans+=res*f2(cnt[i]);</span><br><span class="line">		&#125;<span class="keyword">if</span>(cnt[i]==<span class="number">4</span>)&#123;</span><br><span class="line">			ans++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">8</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(cnt[i]&amp;&amp;cnt[i+<span class="number">1</span>]&amp;&amp;cnt[i+<span class="number">2</span>]&amp;&amp;cnt[i+<span class="number">3</span>]&amp;&amp;cnt[i+<span class="number">4</span>])&#123;</span><br><span class="line">			ans+=cnt[i]*cnt[i+<span class="number">1</span>]*cnt[i+<span class="number">2</span>]*cnt[i+<span class="number">3</span>]*cnt[i+<span class="number">4</span>];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);<span class="keyword">while</span>(t--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: implementation *1000</p>
+<p>H-绵羊的硬币</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/H" target="_blank" rel="noopener">题目链接</a></p>
+<p>打个表</p>
+<p>天才wz嘴了正解</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line">ll fib[<span class="number">110</span>]; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll n;<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">	ll now=<span class="number">1</span>;<span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">60</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(now&gt;n)&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		now*=<span class="number">2</span>;cnt++;</span><br><span class="line">	&#125;	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,fib[cnt]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	fib[<span class="number">1</span>]=<span class="number">1</span>;fib[<span class="number">2</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=<span class="number">100</span>;i++)&#123;</span><br><span class="line">		fib[i]=fib[i<span class="number">-1</span>]+fib[i<span class="number">-2</span>];</span><br><span class="line">	&#125;<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);<span class="keyword">while</span>(t--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: math,brute force,*1300 </p>
+<p>I-迷途的怪物</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/I" target="_blank" rel="noopener">题目链接</a></p>
+<p>找规律，当n为奇数时答案为1，n为偶数时答案为p-1;就是这么简单</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line">ll p;<span class="keyword">char</span> n[<span class="number">1000010</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%s"</span>,&amp;p,n);</span><br><span class="line">	<span class="keyword">int</span> len=<span class="built_in">strlen</span>(n);</span><br><span class="line">	<span class="keyword">int</span> ok=n[len<span class="number">-1</span>]-<span class="string">'0'</span>;</span><br><span class="line">	<span class="keyword">if</span>(ok%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"1\n"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,p<span class="number">-1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);<span class="keyword">while</span>(t--) solve();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: math,brute force,*1500 </p>
+<p>J-简单的数学</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/J" target="_blank" rel="noopener">题目链接</a></p>
+<p>简单数学题（不是</p>
+<p>只要你认真求导 发现当x=1代进去 能消掉一大片233.</p>
+<p>代码又是傻逼几行</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll n;<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"-%lld\n"</span>,n*(n+<span class="number">1</span>));</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,n*(n+<span class="number">1</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		solve();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: math,*1300 </p>
+<p>K-消亡的质数</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/K" target="_blank" rel="noopener">题目链接</a></p>
+<p>被天才wz嘲笑了两天 自闭了</p>
+<p>傻逼题 但我更sb</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll n;<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">	n--;<span class="keyword">if</span>(n%<span class="number">3</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"NO\n"</span>);<span class="keyword">return</span> ;</span><br><span class="line">	&#125;</span><br><span class="line">	n/=<span class="number">3</span>;ll p=<span class="built_in">sqrt</span>(n);<span class="keyword">if</span>(p*(p+<span class="number">1</span>)==n) <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		solve();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags: math,*-1 </p>
+<p>L-危险的台阶 </p>
+<p>待补</p>
+<p>tags:math, *2500</p>
+<p>M-破碎的愿望</p>
+<p><a href="https://ac.nowcoder.com/acm/contest/3036/M" target="_blank" rel="noopener">题目链接</a></p>
+<p>为什么，明明是我最爱字符串题，为什么会变成这样。。。</p>
+<p>写了1w年</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line"><span class="keyword">char</span> ch[<span class="number">40</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;ll k;<span class="built_in">scanf</span>(<span class="string">"%d%lld"</span>,&amp;n,&amp;k);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s"</span>,ch);</span><br><span class="line">	ll x1=k/n;ll x2=k%n;</span><br><span class="line">	<span class="keyword">if</span>(x2) x1++;</span><br><span class="line">	<span class="keyword">if</span>(x1%<span class="number">2</span>==<span class="number">0</span>) reverse(ch,ch+n);</span><br><span class="line">	x2=(k<span class="number">-1</span>)%n;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c"</span>,ch[x2]); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>tags:strings *500</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno" target="_blank" rel="noopener">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
