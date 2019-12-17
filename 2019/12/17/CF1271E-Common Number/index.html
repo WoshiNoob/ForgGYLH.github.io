@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      CF1271E-Common Number | 我们都有光明的前途 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="FrogG_YLH.">
+    
+    
+
+    <meta name="description" content="这道题，一开始以为是什么牛逼的数学题 后来发现好像答案满足单调性？？ 于是二分check就完事了 稳妥一点就分奇偶分别check  像我就喜欢骚一点 直接一遍check 复杂度O(logn^2) 快的一批 123456789101112131415161718192021222324252627282930313233343536373839404142#include&amp;lt;bits&#x2F;stdc">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CF1271E-Common Number | 我们都有光明的前途">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;CF1271E-Common%20Number&#x2F;index.html">
+<meta property="og:site_name" content="我们都有光明的前途">
+<meta property="og:description" content="这道题，一开始以为是什么牛逼的数学题 后来发现好像答案满足单调性？？ 于是二分check就完事了 稳妥一点就分奇偶分别check  像我就喜欢骚一点 直接一遍check 复杂度O(logn^2) 快的一批 123456789101112131415161718192021222324252627282930313233343536373839404142#include&amp;lt;bits&#x2F;stdc">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-17T01:44:26.631Z">
+<meta name="twitter:card" content="summary">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">我们都有光明的前途</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          一只数论自闭字符串不会的菜狗
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">CF1271E-Common Number</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2019-12-17" class="post-meta__date date">2019-12-17</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <hr>
+<p>这道题，一开始以为是什么牛逼的数学题 后来发现好像答案满足单调性？？</p>
+<p>于是二分check就完事了 稳妥一点就分奇偶分别check  像我就喜欢骚一点 直接一遍check</p>
+<p>复杂度O(logn^2) 快的一批</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">50</span>;</span><br><span class="line">ll n,k;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ok</span><span class="params">(ll x)</span></span>&#123;</span><br><span class="line">	ll cnt=<span class="number">1</span>;ll l=x,r=x;</span><br><span class="line">	<span class="keyword">if</span>(x%<span class="number">2</span>==<span class="number">0</span>&amp;&amp;x&lt;n)&#123;</span><br><span class="line">		cnt++;r++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		ll l1=l*<span class="number">2</span>,r1=r*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(r1&gt;n)&#123;</span><br><span class="line">			<span class="keyword">if</span>(l1&gt;n)&#123;</span><br><span class="line">				<span class="keyword">return</span> cnt&gt;=k;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> (cnt+n-l1+<span class="number">1</span>)&gt;=k;</span><br><span class="line">		&#125;</span><br><span class="line">		cnt+=r1-l1+<span class="number">1</span>;r=r1;l=l1;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">bs</span><span class="params">(ll l,ll r)</span></span>&#123;</span><br><span class="line">	ll ans=l;</span><br><span class="line">	<span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">		ll mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span>(mid%<span class="number">2</span>&amp;&amp;mid+<span class="number">1</span>&lt;=r)&#123;</span><br><span class="line">			mid+=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(ok(mid))&#123;</span><br><span class="line">			ans=mid;</span><br><span class="line">			l=mid+<span class="number">1</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			r=mid<span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;n,&amp;k);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,bs(<span class="number">1</span>,n));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno" target="_blank" rel="noopener">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
