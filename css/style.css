@@ -11,9 +11,9 @@ body {
   margin: auto !important;
 }
 #nexmoe-background .nexmoe-bg {
-  opacity: 0.2;
+  opacity: 1;
   background-size: cover;
-  filter: blur(30px);
+  filter: blur(10px);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -81,7 +81,7 @@ body {
   color: #a3a8ae;
 }
 #nexmoe-header .nexmoe-count div span {
-  color: #363636;
+  color: #ff4e6a;
   display: block;
 }
 #nexmoe-header .nexmoe-social {
@@ -126,8 +126,10 @@ body {
   transition: all 0.35s;
 }
 #nexmoe-header .nexmoe-widget-wrap {
+/*background*/
   box-shadow: 0 0 1rem rgba(161,177,204,0.4);
   background-color: #fff;
+  opacity: 0.8;
   margin: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -168,7 +170,7 @@ body {
   line-height: 26px;
   text-align: center;
   border-radius: 100%;
-  color: #fff;
+  color: #5cacee;
   position: absolute;
   right: 10px;
   top: 10px;
