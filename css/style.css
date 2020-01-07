@@ -471,16 +471,17 @@ body {
 }
 article {
   color: #444;
-  font-family: microsoft yahei;
+  font-family: Verdana;
 }
 article p {
   line-height: 24px;
 }
 article code {
-  background-color: rgba(27,31,35,0.05);
-  border-radius: 6px;
-  font-size: 85%;
-  padding: 0.2em 0.4em;
+  background-color: #808080;
+  border-radius: 10px;
+  font-size: 125%;
+  font-family: Consolas;
+  padding: 0.1em 0.2em;
   border: 1px solid #d7dae2;
 }
 article code::-webkit-scrollbar {
@@ -699,7 +700,7 @@ article blockquote {
   position: relative;
   border-radius: 6px;
   border: 1px solid #eee;
-  font-family: sf pro sc, sf pro display, sf pro icons, aos icons, pingfang sc, helvetica neue, helvetica, arial, sans-serif;
+  font-family: Verdana;
 }
 article blockquote:before {
   content: "\201C";
