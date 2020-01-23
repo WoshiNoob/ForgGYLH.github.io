@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>CodeForces Round 615(Div.3) - 我们都有光明的前途</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Hachi赛高">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="第一场AK的div3，写一篇题解纪念一下。 传送门">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeForces Round 615(Div.3)">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;01&#x2F;23&#x2F;CodeForces%20Round%20615(Div.3)&#x2F;index.html">
+<meta property="og:site_name" content="我们都有光明的前途">
+<meta property="og:description" content="第一场AK的div3，写一篇题解纪念一下。 传送门">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-23T03:43:47.061Z">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1579751060843">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://cdnb.artstation.com/p/assets/images/images/004/997/079/large/andreas-rocha-magichour01.jpg?1487753165)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="西瓜喵喵." class="mdui-btn mdui-btn-icon"><img src="/images/head.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="西瓜喵喵.">
+            <img src="/images/head.jpg" alt="西瓜喵喵.">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>8</div>
+        <div><span>Tags</span>2</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/2671065" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/WoshiNoob" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Tag Cloud</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 西瓜喵喵.
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://cdna.artstation.com/p/assets/images/images/003/723/818/large/alena-aenami-close-to-the-sun-1920.jpg?1476824688">
+        
+        <h1>CodeForces Round 615(Div.3)</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年01月23日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1,288 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+    
+  </div>
+  <article>
+    <hr>
+<p>第一场AK的div3，写一篇题解纪念一下。</p>
+<p><a href="https://codeforces.com/contest/1294" target="_blank" rel="noopener">传送门</a></p>
+<a id="more"></a>
+
+<p>注:题解比较简单，没有题意，大家笑一笑就好^^_</p>
+<p>整体难度 A&lt;B&lt;C&lt;D&lt;F&lt;E（大概吧</p>
+<p>A. Collecting Coins</p>
+<p>先把A,B,C填平了，再看看剩下的n能否整除3.</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+ll a[3];
+void solve(){
+    ll n;scanf(&quot;%lld%lld%lld%lld&quot;,&amp;a[0],&amp;a[1],&amp;a[2],&amp;n);
+    sort(a,a+3);
+    ll k=a[2]-a[0]+a[2]-a[1];
+    if(n&lt;k||(n-k)%3){
+        printf(&quot;NO\n&quot;);
+    }else printf(&quot;YES\n&quot;);
+}
+int main(){
+    int t;scanf(&quot;%d&quot;,&amp;t);while(t--) solve();
+}</code></pre>
+<p>B. Collecting Packages</p>
+<p>根据题意可知，能先往右边走就先往右边走，然后再上去，根据高度从低到高排序然后模拟即可.</p>
+<p>如果排完序还出现往左下走的情况就说明不合法。</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+struct node{
+    int x,y;
+}a[1010];
+int cmp(node p,node q){
+    return p.x&lt;q.x||p.x==q.x&amp;&amp;p.y&lt;q.y;
+}
+vector&lt;int&gt;v;
+void solve(){
+    int n;scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n;i++){
+        scanf(&quot;%d%d&quot;,&amp;a[i].x,&amp;a[i].y);
+    }sort(a+1,a+n+1,cmp);
+    v.clear();int x=0,y=0;
+    for(int i=1;i&lt;=n;i++){
+        if(a[i].x&lt;x||a[i].y&lt;y){
+            printf(&quot;NO\n&quot;);return;
+        }for(int j=1;j&lt;=a[i].x-x;j++){
+            v.push_back(1);
+        }for(int j=1;j&lt;=a[i].y-y;j++){
+            v.push_back(2);
+        }x=a[i].x;y=a[i].y;
+    }printf(&quot;YES\n&quot;);
+    for(int i=0;i&lt;v.size();i++){
+        if(v[i]==1) printf(&quot;R&quot;);
+        else printf(&quot;U&quot;);
+    }printf(&quot;\n&quot;);
+}
+int main(){
+    int t;scanf(&quot;%d&quot;,&amp;t);while(t--) solve();
+} </code></pre>
+<p>C. Product of Three Numbers</p>
+<p>没啥好说的，能判断3个是不同的就好了，乱搞题。</p>
+<p>这里推荐施老师的代码（@syh0313 简洁清楚 我的就比较丢人</p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+using namespace std;
+int T,n,a,b;
+int main()
+{
+    scanf(&quot;%d&quot;,&amp;T);
+    while (T--)
+    {
+        scanf(&quot;%d&quot;,&amp;n); a=-1; b=-1;
+        for (int i=2;1ll*i*i&lt;=n;i++) if (n%i==0) {a=i; n/=i; break;}
+        for (int i=2;1ll*i*i&lt;=n;i++) if (n%i==0 &amp;&amp; i!=a &amp;&amp; i!=n/i) {b=i; n/=i; break;}
+        if (a==-1 || b==-1) printf(&quot;NO\n&quot;);
+        else printf(&quot;YES\n%d %d %d\n&quot;,a,b,n);
+    }
+    return 0;
+}</code></pre>
+<p>D. MEX maximizing</p>
+<p>这道题看起来比较吓人，代码其实就10行.可以发现答案是单调递增的，我们可以把所有数先减到不能再减，即取模:a[i]=a[i]%x;再把当前答案也取个模,就能轻松模拟了。</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=4e5+50;
+int vis[maxn];
+int main(){
+    int now=0;memset(vis,0,sizeof(vis));
+    int n,k;scanf(&quot;%d%d&quot;,&amp;n,&amp;k);
+    for(int i=1;i&lt;=n;i++){int x;
+        scanf(&quot;%d&quot;,&amp;x);vis[x%k]++;
+        int y=now/k;
+        while(vis[now%k]&gt;=y+1){
+            now++;y=now/k;
+        }printf(&quot;%d\n&quot;,now);
+    }
+} </code></pre>
+<p>E. Obtain a Permutation</p>
+<p>卡了很久的一道构造题，能发现移动的方式其实很有限，所以可以每列单独考虑，对每一列来说，要么全部替换，要么先移位再替换，移位的思路：对于每一个符合当列要求（即v [i] [j] %m==j%m）的数，算出离它应该呆的位置的距离x，然后用一个数组记录下来，即vis[x]++;最后答案就是ans[j]=min(ans[j],i+(n-vis[i]));</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+vector&lt;int&gt;v[maxn];
+int ans[maxn];int vis[maxn];
+int main(){
+    int n,m;scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+    for(int i=1;i&lt;=n;i++){
+        v[i].push_back(0);
+        for(int j=1;j&lt;=m;j++){int x;
+            scanf(&quot;%d&quot;,&amp;x);v[i].push_back(x);
+        }
+    }int res=0;
+    for(int j=1;j&lt;=m;j++){
+        ans[j]=0;
+        for(int i=1;i&lt;=n;i++){
+            if(v[i][j]!=(i-1)*m+j){
+                ans[j]++;
+            }
+        }
+        for(int i=0;i&lt;n;i++) vis[i]=0;
+        for(int i=1;i&lt;=n;i++){
+            if(v[i][j]%m==j%m){
+                int now=(v[i][j]-j)/m;now++;
+                if(now&gt;n) continue;
+                vis[(i-now+n)%n]++; 
+            }
+        }for(int i=0;i&lt;n;i++){
+            ans[j]=min(ans[j],i+(n-vis[i]));
+        }res+=ans[j];
+    } printf(&quot;%d\n&quot;,res);
+} </code></pre>
+<p>F. Three Paths on a Tree</p>
+<p>先找出一条直径，直径的两端点就是第一二个点。再在直径经过的每一个点上深搜，搜到的那个最远的点就是第三个点</p>
+<p>又是4个dfs(</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+vector&lt;int&gt;g[maxn];
+int vis[maxn];int ss,tt,mxpos;
+int ans=0,th;
+void dfs1(int now,int fa,int pos){
+    if(pos&gt;=mxpos){
+        ss=now;mxpos=pos;
+    }for(int i=0;i&lt;g[now].size();i++){
+        int e=g[now][i];
+        if(e==fa) continue;dfs1(e,now,pos+1);
+    }
+}void dfs2(int now,int fa,int pos){
+    if(pos&gt;=mxpos){
+        tt=now;mxpos=pos;
+    }for(int i=0;i&lt;g[now].size();i++){
+        int e=g[now][i];
+        if(e==fa) continue;dfs2(e,now,pos+1);
+    }
+}int dfs3(int now,int fa){
+    int flag=0;
+    if(now==tt) flag=1;
+    for(int i=0;i&lt;g[now].size();i++){
+        int e=g[now][i];
+        if(e==fa) continue;if(dfs3(e,now)){
+            vis[now]=1;flag=1;
+        }
+    }
+    return flag;
+}void dfs4(int now,int fa,int pos){
+    if(pos&gt;ans){
+        ans=pos;th=now;
+    }for(int i=0;i&lt;g[now].size();i++){
+        int e=g[now][i];
+        if(e==fa||vis[e]) continue;
+        dfs4(e,now,pos+1);
+    }
+}
+int main(){
+    int n;scanf(&quot;%d&quot;,&amp;n);memset(vis,0,sizeof(vis));
+    for(int i=1;i&lt;=n-1;i++){
+        int a,b;scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
+        g[a].push_back(b);g[b].push_back(a);
+    }mxpos=0;dfs1(1,-1,0);mxpos=0;dfs2(ss,-1,0);vis[ss]=vis[tt]=1;
+    dfs3(ss,-1);
+    for(int i=1;i&lt;=n;i++){
+        if(vis[i]&amp;&amp;i!=ss&amp;&amp;i!=tt){
+            th=i;
+        }
+    }
+    for(int i=1;i&lt;=n;i++){
+        if(vis[i]){
+            dfs4(i,-1,0);
+        }
+    }printf(&quot;%d\n%d %d %d&quot;,mxpos+ans,ss,tt,th);
+} </code></pre>
+<p>还要继续努力 qwq</p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>西瓜喵喵.<br>
+<strong>Link：</strong><a href="/https/:ForgGYLH.github.io/2020/01/23/CodeForces%20Round%20615(Div.3)/" title="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;01&#x2F;23&#x2F;CodeForces%20Round%20615(Div.3)&#x2F;" target="_blank" rel="noopener">https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;01&#x2F;23&#x2F;CodeForces%20Round%20615(Div.3)&#x2F;</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1579751060844"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>
