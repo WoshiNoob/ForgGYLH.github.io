@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>CodeForces Round 615(Div.3) - 我们都有光明的前途</title>
+  <title>Codeforces Round - 我们都有光明的前途</title>
   <meta charset="UTF-8">
   <meta name="description" content="Hachi赛高">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,16 +11,18 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="第一场AK的div3，写一篇题解纪念一下。 传送门">
+  <meta name="description" content="好久没更了，更一场上了大分的div2 赛时rk18 +168（呜呜当时怎么这么猛）  传送门">
 <meta name="keywords" content="题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CodeForces Round 615(Div.3)">
-<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;01&#x2F;23&#x2F;CodeForces%20Round%20615(Div.3)&#x2F;index.html">
+<meta property="og:title" content="Codeforces Round">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;03&#x2F;11&#x2F;cf616&#x2F;index.html">
 <meta property="og:site_name" content="我们都有光明的前途">
-<meta property="og:description" content="第一场AK的div3，写一篇题解纪念一下。 传送门">
+<meta property="og:description" content="好久没更了，更一场上了大分的div2 赛时rk18 +168（呜呜当时怎么这么猛）  传送门">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-23T03:43:47.061Z">
+<meta property="og:image" content="&#x2F;.io&#x2F;&#x2F;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583899135509.png">
+<meta property="og:updated_time" content="2020-03-11T04:48:59.054Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="&#x2F;.io&#x2F;&#x2F;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583899135509.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -28,7 +30,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1584024139871">
+  <link rel="stylesheet" href="/css/style.css?v=1584024139912">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -124,12 +126,12 @@
         
         <img src="https://cdna.artstation.com/p/assets/images/images/003/723/818/large/alena-aenami-close-to-the-sun-1920.jpg?1476824688">
         
-        <h1>CodeForces Round 615(Div.3)</h1>
+        <h1>Codeforces Round</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年01月23日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1,288 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年03月11日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1,140 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
     
     
       <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
@@ -137,203 +139,139 @@
   </div>
   <article>
     <hr>
-<p>第一场AK的div3，写一篇题解纪念一下。</p>
-<p><a href="https://codeforces.com/contest/1294" target="_blank" rel="noopener">传送门</a></p>
+<p>好久没更了，更一场上了大分的div2 赛时rk18 +168（<del>呜呜当时怎么这么猛</del>）</p>
+<p><img src="/.io//C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583899135509.png" alt="1583899135509"></p>
+<p><a href="https://codeforces.com/contest/1291" target="_blank" rel="noopener">传送门</a></p>
 <a id="more"></a>
 
-<p>注:题解比较简单，没有题意，大家笑一笑就好^^_</p>
-<p>整体难度 A&lt;B&lt;C&lt;D&lt;F&lt;E（大概吧</p>
-<p>A. Collecting Coins</p>
-<p>先把A,B,C填平了，再看看剩下的n能否整除3.</p>
+<p>整体难度 A&lt;B&lt;C&lt;D&lt;F&lt;E</p>
+<h2 id="A-Even-But-Not-Even"><a href="#A-Even-But-Not-Even" class="headerlink" title="A. Even But Not Even"></a>A. <a href="https://codeforces.ml/contest/1291/problem/A" target="_blank" rel="noopener">Even But Not Even</a></h2><p>可能是全场写的最煎熬的题了(按题意模拟写的)</p>
+<p>赛后知道只要输出两个奇数就好了 艹</p>
+<p>我的sb代码</p>
 <pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int maxn=2e5+50;
-ll a[3];
+char ch[3030];
 void solve(){
-    ll n;scanf(&quot;%lld%lld%lld%lld&quot;,&amp;a[0],&amp;a[1],&amp;a[2],&amp;n);
-    sort(a,a+3);
-    ll k=a[2]-a[0]+a[2]-a[1];
-    if(n&lt;k||(n-k)%3){
-        printf(&quot;NO\n&quot;);
-    }else printf(&quot;YES\n&quot;);
+    int n;scanf(&quot;%d%s&quot;,&amp;n,ch);int sum=0;int cnt=-1;
+    for(int i=0;i&lt;n;i++){
+        sum+=ch[i]-&#39;0&#39;;
+        if((ch[i]-&#39;0&#39;)%2) cnt=i;
+    }if(sum%2==0&amp;&amp;(ch[n-1]-&#39;0&#39;)%2){
+        printf(&quot;%s\n&quot;,ch);return;
+    }
+    if(n==1||cnt==-1){
+        printf(&quot;-1\n&quot;);
+        return;
+    }sum=0;int flag=-1;for(int i=0;i&lt;=cnt;i++){
+        sum+=ch[i]-&#39;0&#39;;if((ch[i]-&#39;0&#39;)%2&amp;&amp;i!=cnt) flag=i;
+    }if(sum%2==0){
+        for(int i=0;i&lt;=cnt;i++) printf(&quot;%c&quot;,ch[i]);printf(&quot;\n&quot;);
+    }else if(flag==-1){
+        printf(&quot;-1\n&quot;);
+    }else{
+        for(int i=0;i&lt;=cnt;i++) if(i!=flag) printf(&quot;%c&quot;,ch[i]);printf(&quot;\n&quot;);
+    }
 }
 int main(){
     int t;scanf(&quot;%d&quot;,&amp;t);while(t--) solve();
-}</code></pre>
-<p>B. Collecting Packages</p>
-<p>根据题意可知，能先往右边走就先往右边走，然后再上去，根据高度从低到高排序然后模拟即可.</p>
-<p>如果排完序还出现往左下走的情况就说明不合法。</p>
+} </code></pre>
+<p>实际上只需要这样</p>
 <pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
-const int maxn=2e5+50;
-struct node{
-    int x,y;
-}a[1010];
-int cmp(node p,node q){
-    return p.x&lt;q.x||p.x==q.x&amp;&amp;p.y&lt;q.y;
+const int maxn=(int)2e5+100;
+int n;
+char s[maxn];
+int solve(){
+    scanf(&quot;%d%s&quot;,&amp;n,s+1); int cnt=0,ans=0;
+    for(int i=1;i&lt;=n;i++){
+        if((s[i]-&#39;0&#39;)%2) cnt++,ans=ans*10+s[i]-&#39;0&#39;;
+        if(cnt==2) return printf(&quot;%d\n&quot;,ans);
+    }return puts(&quot;-1&quot;);
 }
-vector&lt;int&gt;v;
-void solve(){
+int main(){
+    int T;cin&gt;&gt;T;while(T--) solve();
+}</code></pre>
+<h2 id="B-Array-Sharpening"><a href="#B-Array-Sharpening" class="headerlink" title="B. Array Sharpening"></a>B. <a href="https://codeforces.ml/contest/1291/problem/B" target="_blank" rel="noopener">Array Sharpening</a></h2><p>这把我是弱智A题，但是没关系，因为我就要开启王者模式，芜湖起飞，从现在开始我要起飞了~</p>
+<p><del>不知道他们为啥写的这么慢</del></p>
+<p>贪心想一想 满足最小的情况就行 正反dp一下 然后judge就好了</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=3e5+50;
+int a[maxn];
+int ok1[maxn],ok2[maxn];
+int solve(){
     int n;scanf(&quot;%d&quot;,&amp;n);
-    for(int i=1;i&lt;=n;i++){
-        scanf(&quot;%d%d&quot;,&amp;a[i].x,&amp;a[i].y);
-    }sort(a+1,a+n+1,cmp);
-    v.clear();int x=0,y=0;
-    for(int i=1;i&lt;=n;i++){
-        if(a[i].x&lt;x||a[i].y&lt;y){
-            printf(&quot;NO\n&quot;);return;
-        }for(int j=1;j&lt;=a[i].x-x;j++){
-            v.push_back(1);
-        }for(int j=1;j&lt;=a[i].y-y;j++){
-            v.push_back(2);
-        }x=a[i].x;y=a[i].y;
-    }printf(&quot;YES\n&quot;);
-    for(int i=0;i&lt;v.size();i++){
-        if(v[i]==1) printf(&quot;R&quot;);
-        else printf(&quot;U&quot;);
-    }printf(&quot;\n&quot;);
+    for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;a[i]),ok1[i]=ok2[i]=0;ok2[n+1]=1;
+    for(int i=n;i&gt;=1;i--){
+        if(a[i]&gt;=n-i) ok2[i]=1;
+        else break;
+    }for(int i=1;i&lt;=n;i++){
+        if(a[i]&gt;=i-1) ok1[i]=1;
+        else break;
+    }for(int i=1;i&lt;=n;i++){
+        if(ok1[i]&amp;&amp;ok2[i]) return printf(&quot;Yes\n&quot;);
+    }return printf(&quot;No\n&quot;);
 }
 int main(){
     int t;scanf(&quot;%d&quot;,&amp;t);while(t--) solve();
 } </code></pre>
-<p>C. Product of Three Numbers</p>
-<p>没啥好说的，能判断3个是不同的就好了，乱搞题。</p>
-<p>这里推荐施老师的代码（@syh0313 简洁清楚 我的就比较丢人</p>
-<pre><code class="cpp">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;cstdlib&gt;
-using namespace std;
-int T,n,a,b;
-int main()
-{
-    scanf(&quot;%d&quot;,&amp;T);
-    while (T--)
-    {
-        scanf(&quot;%d&quot;,&amp;n); a=-1; b=-1;
-        for (int i=2;1ll*i*i&lt;=n;i++) if (n%i==0) {a=i; n/=i; break;}
-        for (int i=2;1ll*i*i&lt;=n;i++) if (n%i==0 &amp;&amp; i!=a &amp;&amp; i!=n/i) {b=i; n/=i; break;}
-        if (a==-1 || b==-1) printf(&quot;NO\n&quot;);
-        else printf(&quot;YES\n%d %d %d\n&quot;,a,b,n);
-    }
-    return 0;
-}</code></pre>
-<p>D. MEX maximizing</p>
-<p>这道题看起来比较吓人，代码其实就10行.可以发现答案是单调递增的，我们可以把所有数先减到不能再减，即取模:a[i]=a[i]%x;再把当前答案也取个模,就能轻松模拟了。</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-const int maxn=4e5+50;
-int vis[maxn];
-int main(){
-    int now=0;memset(vis,0,sizeof(vis));
-    int n,k;scanf(&quot;%d%d&quot;,&amp;n,&amp;k);
-    for(int i=1;i&lt;=n;i++){int x;
-        scanf(&quot;%d&quot;,&amp;x);vis[x%k]++;
-        int y=now/k;
-        while(vis[now%k]&gt;=y+1){
-            now++;y=now/k;
-        }printf(&quot;%d\n&quot;,now);
-    }
-} </code></pre>
-<p>E. Obtain a Permutation</p>
-<p>卡了很久的一道构造题，能发现移动的方式其实很有限，所以可以每列单独考虑，对每一列来说，要么全部替换，要么先移位再替换，移位的思路：对于每一个符合当列要求（即v [i] [j] %m==j%m）的数，算出离它应该呆的位置的距离x，然后用一个数组记录下来，即vis[x]++;最后答案就是ans[j]=min(ans[j],i+(n-vis[i]));</p>
+<h2 id="C-Mind-Control"><a href="#C-Mind-Control" class="headerlink" title="C.Mind Control"></a>C.<a href="https://codeforces.ml/contest/1291/problem/C" target="_blank" rel="noopener">Mind Control</a></h2><p>比较迷幻的一道题，看到3500就知道N2，然后既然要控制人，那我肯定一开始就要控制（但其实我也不知道为什么，单纯因为如果不是这样会非常难写，所以就开莽了），那么在这个基础上，枚举左边需要控制多少人，右边就是k-左边的人数，取最大值，这是第一重循环，然后的话再枚举左边随机的人，因为随机，所以肯定取最小值，这是第二重循环，那么答案其实已经出来了。</p>
 <pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
 const int maxn=2e5+50;
-vector&lt;int&gt;v[maxn];
-int ans[maxn];int vis[maxn];
-int main(){
-    int n,m;scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
-    for(int i=1;i&lt;=n;i++){
-        v[i].push_back(0);
-        for(int j=1;j&lt;=m;j++){int x;
-            scanf(&quot;%d&quot;,&amp;x);v[i].push_back(x);
-        }
-    }int res=0;
-    for(int j=1;j&lt;=m;j++){
-        ans[j]=0;
-        for(int i=1;i&lt;=n;i++){
-            if(v[i][j]!=(i-1)*m+j){
-                ans[j]++;
-            }
-        }
-        for(int i=0;i&lt;n;i++) vis[i]=0;
-        for(int i=1;i&lt;=n;i++){
-            if(v[i][j]%m==j%m){
-                int now=(v[i][j]-j)/m;now++;
-                if(now&gt;n) continue;
-                vis[(i-now+n)%n]++; 
-            }
-        }for(int i=0;i&lt;n;i++){
-            ans[j]=min(ans[j],i+(n-vis[i]));
-        }res+=ans[j];
-    } printf(&quot;%d\n&quot;,res);
-} </code></pre>
-<p>F. Three Paths on a Tree</p>
-<p>先找出一条直径，直径的两端点就是第一二个点。再在直径经过的每一个点上深搜，搜到的那个最远的点就是第三个点</p>
-<p>又是4个dfs(</p>
-<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-const int maxn=2e5+50;
-vector&lt;int&gt;g[maxn];
-int vis[maxn];int ss,tt,mxpos;
-int ans=0,th;
-void dfs1(int now,int fa,int pos){
-    if(pos&gt;=mxpos){
-        ss=now;mxpos=pos;
-    }for(int i=0;i&lt;g[now].size();i++){
-        int e=g[now][i];
-        if(e==fa) continue;dfs1(e,now,pos+1);
-    }
-}void dfs2(int now,int fa,int pos){
-    if(pos&gt;=mxpos){
-        tt=now;mxpos=pos;
-    }for(int i=0;i&lt;g[now].size();i++){
-        int e=g[now][i];
-        if(e==fa) continue;dfs2(e,now,pos+1);
-    }
-}int dfs3(int now,int fa){
-    int flag=0;
-    if(now==tt) flag=1;
-    for(int i=0;i&lt;g[now].size();i++){
-        int e=g[now][i];
-        if(e==fa) continue;if(dfs3(e,now)){
-            vis[now]=1;flag=1;
-        }
-    }
-    return flag;
-}void dfs4(int now,int fa,int pos){
-    if(pos&gt;ans){
-        ans=pos;th=now;
-    }for(int i=0;i&lt;g[now].size();i++){
-        int e=g[now][i];
-        if(e==fa||vis[e]) continue;
-        dfs4(e,now,pos+1);
-    }
+int a[3550];
+void solve(){
+    int n,m,k;scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;k);
+    for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;a[i]);
+    k=min(k,m-1);int ans=0;
+    for(int i=0;i&lt;=k;i++){
+        int l=i+1;int r=n-(k-i);int rem=m-k-1;int res=1e9;
+        for(int j=0;j&lt;=rem;j++){
+            int l1=l+j;int r1=r-(rem-j);
+            int tmp=max(a[l1],a[r1]);res=min(res,tmp);
+        }ans=max(ans,res);
+    }printf(&quot;%d\n&quot;,ans);
 }
 int main(){
-    int n;scanf(&quot;%d&quot;,&amp;n);memset(vis,0,sizeof(vis));
-    for(int i=1;i&lt;=n-1;i++){
-        int a,b;scanf(&quot;%d%d&quot;,&amp;a,&amp;b);
-        g[a].push_back(b);g[b].push_back(a);
-    }mxpos=0;dfs1(1,-1,0);mxpos=0;dfs2(ss,-1,0);vis[ss]=vis[tt]=1;
-    dfs3(ss,-1);
-    for(int i=1;i&lt;=n;i++){
-        if(vis[i]&amp;&amp;i!=ss&amp;&amp;i!=tt){
-            th=i;
-        }
-    }
-    for(int i=1;i&lt;=n;i++){
-        if(vis[i]){
-            dfs4(i,-1,0);
-        }
-    }printf(&quot;%d\n%d %d %d&quot;,mxpos+ans,ss,tt,th);
+    int t;scanf(&quot;%d&quot;,&amp;t);while(t--) solve();
 } </code></pre>
-<p>还要继续努力 qwq</p>
+<h2 id="D-Irreducible-Anagrams"><a href="#D-Irreducible-Anagrams" class="headerlink" title="D.Irreducible Anagrams"></a>D.<a href="https://codeforces.ml/contest/1291/problem/D" target="_blank" rel="noopener">Irreducible Anagrams</a></h2><p>这波啊，这波是随便猜猜</p>
+<p>给你一个串和q个询问，每个询问给定这个串中的子串，问你能否找出另一个串满足“at least one irreducible anagram.”</p>
+<p>q既然是1e5，那询问复杂度肯定不高，我就直接开始猜结论。</p>
+<p>那么有三种情况是判yes的，其余都是no:</p>
+<p>1.len为1（很简单，不证了</p>
+<p>2.子串开头结尾不相等：那么只要把开头和结尾调换一下，中间复制，就是符合要求的串</p>
+<p>3.有三个及以上不同的字母：建立在首尾相同的情况下，假设开头结尾字母为A，剩下两个为BC,我们用B替换开头的A，用C替换结尾的A，注意不能用第二个出现的字母去替换开头。</p>
+<p>如：ABCA-&gt;CAAB 而不能AB|CA-&gt;BA|AC</p>
+<p>AAABCCCA-&gt;CAAAABCC</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+char ch[maxn];int cnt[maxn][30];
+int solve(){
+    int l,r;scanf(&quot;%d%d&quot;,&amp;l,&amp;r);
+    int x=ch[r]-&#39;a&#39;;
+    if(ch[l]!=ch[r]||l==r) return printf(&quot;Yes\n&quot;);
+    int ans=0;
+    for(int i=0;i&lt;26;i++)
+        if(cnt[r][i]-cnt[l][i]) ans++;
+    if(ans&gt;=3) return printf(&quot;Yes\n&quot;);
+    else return printf(&quot;No\n&quot;);
+}
+int main(){
+    scanf(&quot;%s&quot;,ch+1);int q;scanf(&quot;%d&quot;,&amp;q);int n=strlen(ch+1);
+    for(int i=0;i&lt;26;i++) cnt[0][i]=0;
+    for(int i=1;i&lt;=n;i++){
+        for(int j=0;j&lt;26;j++) cnt[i][j]=cnt[i-1][j];
+        cnt[i][ch[i]-&#39;a&#39;]++;
+    }while(q--) solve();
+} </code></pre>
 
   </article>
   
@@ -341,7 +279,7 @@ int main(){
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>Author：</strong>西瓜喵喵.<br>
-<strong>Link：</strong><a href="/https/:ForgGYLH.github.io/2020/01/23/CodeForces%20Round%20615(Div.3)/" title="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;01&#x2F;23&#x2F;CodeForces%20Round%20615(Div.3)&#x2F;" target="_blank" rel="noopener">https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;01&#x2F;23&#x2F;CodeForces%20Round%20615(Div.3)&#x2F;</a><br>
+<strong>Link：</strong><a href="/https/:ForgGYLH.github.io/2020/03/11/cf616/" title="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;03&#x2F;11&#x2F;cf616&#x2F;" target="_blank" rel="noopener">https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;03&#x2F;11&#x2F;cf616&#x2F;</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -381,7 +319,7 @@ int main(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1584024139872"></script>
+<script src="/js/app.js?v=1584024139913"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
