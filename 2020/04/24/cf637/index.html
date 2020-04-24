@@ -19,12 +19,8 @@
 <meta property="og:site_name" content="我们都有光明的前途">
 <meta property="og:description" content="只包括div1的B和C的题解 传送门">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="&#x2F;.io&#x2F;&#x2F;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704504529.png">
-<meta property="og:image" content="&#x2F;.io&#x2F;&#x2F;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704857283.png">
-<meta property="og:image" content="&#x2F;.io&#x2F;&#x2F;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704866550.png">
-<meta property="og:updated_time" content="2020-04-24T05:20:34.181Z">
+<meta property="og:updated_time" content="2020-04-24T05:28:55.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="&#x2F;.io&#x2F;&#x2F;C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704504529.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -32,7 +28,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1587705676412">
+  <link rel="stylesheet" href="/css/style.css?v=1587706147187">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -132,7 +128,7 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月24日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1,425 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>1,422 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
     
     
@@ -151,7 +147,7 @@
 <p>可以发现n只有2000 考虑DP，同时又能发现 因为越前面的数字对全局的影响越大，所以肯定要贪心求前面最大的数。因此思路就是 DP预处理+贪心</p>
 <p>DP预处理的是：当前我在i这个位置，剩余k0根木棍，选了j（0&lt;=j&lt;=9)这个数字，那么我接下来能否用剩下的木棍（k0-选了j需要的木棍)使剩下的位置满足题目的要求。</p>
 <p>DPi,j表示从当前的i到最后的n，能否用j根木棍满足题目要求</p>
-<p>转移方式：从n到1遍历，再从0到k遍历，再遍历0到9，看能否由dp i+1,j转移过来<img src="/.io//C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704504529.png" alt="1587704504529"></p>
+<p>转移方式：从n到1遍历，再从0到k遍历，再遍历0到9，看能否由dp i+1,j转移过来</p>
 <p>如果可以就标记1 </p>
 <p>最后贪心从头到尾遍历即可</p>
 <p>Code</p>
@@ -198,8 +194,7 @@ void cal(int j){ int now=1;int ans=0,cnt=0;
 <p>dp i,j表示的是当前在第i个点,绿灯还剩j秒时的最短时间</p>
 <p>因为是最短时间，所以这就类似于最短路的思想</p>
 <p>所以转移的方式是 一个点可以向它的左边或者右边走，比如3可以走到0或7，7可以走到3或者14 边界点特判一下。</p>
-<p>然后既然是最短路 那转移的时候可以用类似dijkstra的思想 也就是：<img src="/.io//C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704857283.png" alt="1587704857283"></p>
-<p><img src="/.io//C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1587704866550.png" alt="1587704866550"></p>
+<p>然后既然是最短路 那转移的时候可以用类似dijkstra的思想 </p>
 <p>其中dpij的值的意思是 当前经过的周期，比如dpij=<strong>1</strong> 代表到了这个状态经过了<strong>1</strong>个（绿灯+红灯）的时间</p>
 <p>但是我们能发现 dijkstra的复杂度不满足题目的要求 因为题目中光状态就有1e7个 会TLE</p>
 <p>然后我们又发现，转移的时候要么在当前绿灯的范围内，要么到了下一个绿灯的周期中，所以dp的值在转移的时候要么不变要么加一，这时候我们就可以用双端队列代替dij中的优先队列，如果不变，那么push进头部，如果+1，push进尾部，这样也可以保证整个队列是有序的</p>
@@ -346,7 +341,7 @@ void dijkstra(int s){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1587705676413"></script>
+<script src="/js/app.js?v=1587706147189"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
