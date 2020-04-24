@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>CF1271E-Common Number - 我们都有光明的前途</title>
+  <title>Archive：2020/4 - 我们都有光明的前途</title>
   <meta charset="UTF-8">
   <meta name="description" content="Hachi赛高">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,15 +11,13 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="这道题，一开始以为是什么牛逼的数学题 后来发现好像答案满足单调性？？ 于是二分check就完事了 稳妥一点就分奇偶分别check  像我就喜欢骚一点 直接一遍check 复杂度O(logn^2) 快的一批">
-<meta name="keywords" content="题解">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CF1271E-Common Number">
-<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;CF1271E-Common%20Number&#x2F;index.html">
+  <meta name="description" content="Hachi赛高">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我们都有光明的前途">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;archives&#x2F;2020&#x2F;04&#x2F;index.html">
 <meta property="og:site_name" content="我们都有光明的前途">
-<meta property="og:description" content="这道题，一开始以为是什么牛逼的数学题 后来发现好像答案满足单调性？？ 于是二分check就完事了 稳妥一点就分奇偶分别check  像我就喜欢骚一点 直接一遍check 复杂度O(logn^2) 快的一批">
+<meta property="og:description" content="Hachi赛高">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-01T09:22:38.902Z">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -28,7 +26,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1587705676417">
+  <link rel="stylesheet" href="/css/style.css?v=1587705676479">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -119,103 +117,37 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <div class="nexmoe-post">
-    <div class="nexmoe-post-cover"> 
-        
-        <img src="https://cdnb.artstation.com/p/assets/images/images/003/462/039/large/alena-aenami-over-the-city1k.jpg?1473938756">
-        
-        <h1>CF1271E-Common Number</h1>
+        <section class="nexmoe-posts" id="brand-waterfall">
+    
+    <div class="nexmoe-post">
+        <a href="/2020/04/24/cf637/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                <img src="https://cdna.artstation.com/p/assets/images/images/003/723/818/large/alena-aenami-close-to-the-sun-1920.jpg?1476824688" alt="Codeforces Round 637 (Div.1)">
+                
+                <h1>Codeforces Round 637 (Div.1)</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月24日</a>
+            <a><i class="nexmoefont icon-areachart"></i>1,425 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+            
+        </div>
+        <article>
+            
+            <hr>
+<p><strong>只包括div1的B和C的题解</strong></p>
+<p><a href="https://codeforces.com/contest/1340" target="_blank" rel="noopener">传送门</a></p>
+            
+        </article>
     </div>
-  <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月17日</a>
-    <a><i class="nexmoefont icon-areachart"></i>197 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
-    
-      <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
-    
-  </div>
-  <article>
-    <hr>
-<p>这道题，一开始以为是什么牛逼的数学题 后来发现好像答案满足单调性？？</p>
-<p>于是二分check就完事了 稳妥一点就分奇偶分别check  像我就喜欢骚一点 直接一遍check</p>
-<p>复杂度O(logn^2) 快的一批</p>
-<a id="more"></a>
-
-<pre><code class="C++">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-typedef long long ll;
-const int maxn=2e5+50;
-ll n,k;
-int ok(ll x){
-    ll cnt=1;ll l=x,r=x;
-    if(x%2==0&amp;&amp;x&lt;n){
-        cnt++;r++;
-    }
-    while(1){
-        ll l1=l*2,r1=r*2+1;
-        if(r1&gt;n){
-            if(l1&gt;n){
-                return cnt&gt;=k;
-            }
-            return (cnt+n-l1+1)&gt;=k;
-        }
-        cnt+=r1-l1+1;r=r1;l=l1;
-    }
-
-}
-ll bs(ll l,ll r){
-    ll ans=l;
-    while(l&lt;=r){
-        ll mid=(l+r)/2;
-        if(mid%2&amp;&amp;mid+1&lt;=r){
-            mid+=1;
-        }
-        if(ok(mid)){
-            ans=mid;
-            l=mid+1;
-        }else{
-            r=mid-1;
-        }
-    }
-    return ans;
-}
-int main(){
-    scanf(&quot;%lld%lld&quot;,&amp;n,&amp;k);
-    printf(&quot;%lld\n&quot;,bs(1,n));
-}</code></pre>
-
-  </article>
-  
-    
-<div class="nexmoe-post-copyright">
-<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-<strong>Author：</strong>西瓜喵喵.<br>
-<strong>Link：</strong><a href="/https/:ForgGYLH.github.io/2019/12/17/CF1271E-Common%20Number/" title="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;CF1271E-Common%20Number&#x2F;" target="_blank" rel="noopener">https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;12&#x2F;17&#x2F;CF1271E-Common%20Number&#x2F;</a><br>
-
-  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-
-</div>
-
-
-  
-  <section class="nexmoe-comment">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
-<div id="gitalk"></div>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '80b2453b6d5f37ad6225',
-        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
-        id: window.location.pathname,
-        repo: 'nexmoe.github.io',
-        owner: 'nexmoe',
-        admin: 'nexmoe'
-    })
-    gitalk.render('gitalk')
-</script>
 </section>
-</div>
+
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
@@ -231,7 +163,7 @@ int main(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1587705676418"></script>
+<script src="/js/app.js?v=1587705676480"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
