@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>LuoGuP1470【最长前缀LongestPrefix】 - 我们都有光明的前途</title>
+  <title>Archive：2020/6 - 我们都有光明的前途</title>
   <meta charset="UTF-8">
   <meta name="description" content="Hachi赛高">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,15 +11,13 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="（反正题解没人看 就提供个思路吧） Trie+DFS 每搜到一个节点看它是不是一个单词的终点，是就加一个搜索路径，不是就按照Trie的Find()模板进行DFS. 优化：记得加vis数组进行记忆化搜索，不然会有重复情况会TLE。">
-<meta name="keywords" content="题解">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LuoGuP1470【最长前缀LongestPrefix】">
-<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;11&#x2F;04&#x2F;LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91&#x2F;index.html">
+  <meta name="description" content="Hachi赛高">
+<meta property="og:type" content="website">
+<meta property="og:title" content="我们都有光明的前途">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;archives&#x2F;2020&#x2F;06&#x2F;index.html">
 <meta property="og:site_name" content="我们都有光明的前途">
-<meta property="og:description" content="（反正题解没人看 就提供个思路吧） Trie+DFS 每搜到一个节点看它是不是一个单词的终点，是就加一个搜索路径，不是就按照Trie的Find()模板进行DFS. 优化：记得加vis数组进行记忆化搜索，不然会有重复情况会TLE。">
+<meta property="og:description" content="Hachi赛高">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-05T04:11:11.060Z">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -28,7 +26,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1591768701349">
+  <link rel="stylesheet" href="/css/style.css?v=1591768701386">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -119,131 +117,102 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <div class="nexmoe-post">
-    <div class="nexmoe-post-cover"> 
-        
-            <img src="/images/andreas-rocha-magichour01.jpg">
-        
-        <h1>LuoGuP1470【最长前缀LongestPrefix】</h1>
-    </div>
-  <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月04日</a>
-    <a><i class="nexmoefont icon-areachart"></i>283 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+        <section class="nexmoe-posts" id="brand-waterfall">
     
-    
-      <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
-    
-  </div>
-  <article>
-    <p>（<del>反正题解没人看 就提供个思路吧</del>）</p>
-<p>Trie+DFS 每搜到一个节点看它是不是一个单词的终点，是就加一个搜索路径，不是就按照Trie的Find()模板进行DFS. 优化：记得加vis数组进行记忆化搜索，不然会有重复情况会TLE。</p>
-<a id="more"></a>
-
-<p>上代码</p>
-<pre><code class="cpp">#include &lt;iostream&gt;
-#include&lt;stdio.h&gt;
-#include&lt;string.h&gt;
-#include&lt;math.h&gt;
-#include&lt;queue&gt;
-#include&lt;vector&gt;
-#include&lt;map&gt;
-#include&lt;algorithm&gt;
+    <div class="nexmoe-post">
+        <a href="/2020/06/10/CSP/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                <img src="https://cdna.artstation.com/p/assets/images/images/003/723/818/large/alena-aenami-close-to-the-sun-1920.jpg?1476824688" alt="CSP-化学方程式（模拟）">
+                
+                <h1>CSP-化学方程式（模拟）</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月10日</a>
+            <a><i class="nexmoefont icon-areachart"></i>860 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+            
+        </div>
+        <article>
+            
+            <hr>
+<p>传送门-&gt;<a href="http://118.190.20.162/view.page?gpid=T98（需要登录）" target="_blank" rel="noopener">http://118.190.20.162/view.page?gpid=T98（需要登录）</a></p>
+<p>题意：化学方程式，也称为化学反应方程式，是用化学式表示化学反应的式子。给出一组化学方程式，请你编写程序判断每个方程式是否配平（也就是方程式中等号左右两边的元素种类和对应的原子个数是否相同）。<br>本题给出的化学方程式由大小写字母、数字和符号（包括等号=、加号+、左圆括号和右圆括号）组成，不会出现其他字符（包括空白字符，如空格、制表符等），化学方程式的格式与化学课本中的形式基本相同（化学式中表示元素原子个数的下标用正常文本，如H2O写成H2O），用自然语言描述如下：</p>
+<pre><code>化学方程式由左右两个表达式组成，中间用一个等号三连接，如2H2+O2=2H2O；
+表达式由若干部分组成，每部分由系数和化学式构成，部分之间用加号+连接，如2H2+O2、2H2O；
+系数是整数或空串，如为空串表示系数为1；
+整数由一个或多个数字构成；
+化学式由若干部分组成，每部分由项和系数构成，部分之间直接连接，如H2O、CO2、Ca(OH)2、Ba3(PO4)2；
+项是元素或用左右圆括号括起来的化学式，如H、Ca、(OH)、(P04)；
+元素可以是一个大写字母，也可以是一个大写字母跟着一个小写字母，如H、O、Ca。</code></pre><p>输入：11<br>H2+O2=H2O<br>2H2+O2=2H2O<br>H2+Cl2=2NaCl<br>H2+Cl2=2HCl<br>CH4+2O2=CO2+2H2O<br>CaCl2+2AgNO3=Ca(NO3)2+2AgCl<br>3Ba(OH)2+2H3PO4=6H2O+Ba3(PO4)2<br>3Ba(OH)2+2H3PO4=Ba3(PO4)2+6H2O<br>4Zn+10HNO3=4Zn(NO3)2+NH4NO3+3H2O<br>4Au+8NaCN+2H2O+O2=4Na(Au(CN)2)+4NaOH<br>Cu+As=Cs+Au<br>输出：N<br>Y<br>N<br>Y<br>Y<br>Y<br>Y<br>Y<br>Y<br>Y<br>N</p>
+<p>思路：一道小模拟吧算是，难点主要在嵌套的括号这里，我用了递归实现，传回去的参数我选择了</p>
+<p>map&lt;string,int&gt;。其他也没什么好说的。</p>
+<p>题外话：这应该是近期的最后一篇博文了，这个博客近期应该是闲置了。顺便这道题我也是1A，小小纪念一下。</p>
+<p>话不多说，直接上代码。作为一个小模拟50行出头还是很可以的（</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 typedef long long ll;
-typedef unsigned long long ull;
-const int maxn=5050;
-const int INF = 0x3f3f3f3f;
-int tree[maxn][30];
-bool vis[2020][200020];
-int ed[maxn];
-char que[200020];
-char ch[20];
-int n,cnt,Len;
-int ans=0;
-int newnode(){
-    for(int i=0;i&lt;=26;i++){
-        tree[cnt][i]=-1;
-    }
-    ed[cnt]=0;
-    return cnt++;
-}
-void init(){
-    cnt=0;
-    newnode();
-}
-void insert(){
-    int len=strlen(ch);
-    int root=0;
-    for(int i=0;i&lt;len;i++){
-        int x=ch[i]-&#39;A&#39;;
-        if(tree[root][x]&lt;=0){
-            tree[root][x]=newnode();
+const int maxn=1e3+50;
+char ch[maxn],tmp[maxn],dig[maxn];
+map&lt;string,int&gt;mp; int j,p;
+bool isdig(char x){
+    return x&gt;=&#39;0&#39;&amp;&amp;x&lt;=&#39;9&#39;;
+}bool islower(char x){
+    return x&gt;=&#39;a&#39;&amp;&amp;x&lt;=&#39;z&#39;;
+}int getdig(){ int tp=0,xs=0;
+    while(isdig(tmp[j])&amp;&amp;j&lt;p){
+        dig[tp++]=tmp[j];j++;
+    }dig[tp]=0;xs=atoi(dig);if(!xs) xs=1;
+    return xs;
+}map&lt;string,int&gt; analyze(){
+    map&lt;string,int&gt; mm,now;
+    while(j&lt;p){ string x;
+        if(tmp[j]==&#39;(&#39;){ 
+            j++;mm=analyze();
+            for(auto y:mm) now[y.first]+=y.second;
+        }else if(tmp[j]==&#39;)&#39;){
+            j++;int xs=getdig();
+            for(auto y:now){
+                //cout&lt;&lt;y.first&lt;&lt;y.second*xs&lt;&lt;endl;
+                now[y.first]=y.second*xs;
+            }return now;
+        }else{
+            x+=tmp[j++];if(islower(tmp[j])) x+=tmp[j++];
+            int xs=getdig();now[x]+=xs;
         }
-        root=tree[root][x];
-    }
-    ed[root]=1;
-}
-void dfs(int pos,int len){
-    if(vis[pos][len]) return;
-    vis[pos][len]=1;
-    int x=que[len]-&#39;A&#39;;
-    if(ed[pos]){
-        ans=max(ans,len);
-    }
-    if(len==Len){
-        return;
-    }
-    if(tree[pos][x]!=-1){
-        dfs(tree[pos][x],len+1);
-    }if(ed[pos]){
-        dfs(0,len);
-    }
+    }return now;
+}void solve(){
+    scanf(&quot;%s&quot;,ch);mp.clear(); 
+    int n=strlen(ch);p=0; int flg=1;
+    for(int i=0;i&lt;=n;i++){
+        if(i==n||ch[i]==&#39;+&#39;||ch[i]==&#39;=&#39;){ j=0;
+            tmp[p]=0;int xs=getdig();
+            map&lt;string,int&gt; mm=analyze();p=0;
+            for(auto y:mm){
+                //cout&lt;&lt;y.first&lt;&lt;y.second*xs&lt;&lt;endl;
+                mp[y.first]+=y.second*xs*flg; 
+            }if(ch[i]==&#39;=&#39;) flg=-1;
+        }else tmp[p++]=ch[i];
+    }for(auto y:mp) if(y.second!=0) return (void)printf(&quot;N\n&quot;);
+    printf(&quot;Y\n&quot;);
 }
 int main(){
-    init();
-    while(scanf(&quot;%s&quot;,ch)&amp;&amp;strcmp(ch,&quot;.&quot;)){
-        insert();
-    }
-    Len=0;
-    while(scanf(&quot;%s&quot;,que+Len)!=EOF){
-        Len=strlen(que);
-    }
-    dfs(0,0);
-    printf(&quot;%d\n&quot;,ans);
+    int t;scanf(&quot;%d&quot;,&amp;t);while(t--) solve();
+    return 0;
 }</code></pre>
+<p>我们有缘再会~</p>
+<p>​                                                                                                                                            By FrogGLeader</p>
 
-  </article>
-  
+            
+        </article>
+    </div>
     
-<div class="nexmoe-post-copyright">
-<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
-<strong>Author：</strong>西瓜喵喵.<br>
-<strong>Link：</strong><a href="/https/:ForgGYLH.github.io/2019/11/04/LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91/" title="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;11&#x2F;04&#x2F;LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91&#x2F;" target="_blank" rel="noopener">https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2019&#x2F;11&#x2F;04&#x2F;LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91&#x2F;</a><br>
-
-  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-
-</div>
-
-
-  
-  <section class="nexmoe-comment">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
-<div id="gitalk"></div>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '80b2453b6d5f37ad6225',
-        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
-        id: window.location.pathname,
-        repo: 'nexmoe.github.io',
-        owner: 'nexmoe',
-        admin: 'nexmoe'
-    })
-    gitalk.render('gitalk')
-</script>
 </section>
-</div>
+
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
@@ -259,7 +228,7 @@ int main(){
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1591768701350"></script>
+<script src="/js/app.js?v=1591768701388"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

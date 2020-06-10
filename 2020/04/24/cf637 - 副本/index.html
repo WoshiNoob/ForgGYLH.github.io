@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Codeforces Round 637 (Div.1) - 我们都有光明的前途</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Hachi赛高">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
+  <meta name="description" content="只包括div1的B和C的题解 传送门">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round 637 (Div.1)">
+<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;04&#x2F;24&#x2F;cf637%20-%20%E5%89%AF%E6%9C%AC&#x2F;index.html">
+<meta property="og:site_name" content="我们都有光明的前途">
+<meta property="og:description" content="只包括div1的B和C的题解 传送门">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-24T05:28:55.129Z">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
+  <link rel="stylesheet" href="/css/style.css?v=1591768701333">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(/images/andreas-rocha-magichour01.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="西瓜喵喵." class="mdui-btn mdui-btn-icon"><img src="/images/head.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="西瓜喵喵.">
+            <img src="/images/head.jpg" alt="西瓜喵喵.">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>12</div>
+        <div><span>Tags</span>2</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/2671065" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/WoshiNoob" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Tag Cloud</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 西瓜喵喵.
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://cdna.artstation.com/p/assets/images/images/003/723/818/large/alena-aenami-close-to-the-sun-1920.jpg?1476824688">
+        
+        <h1>Codeforces Round 637 (Div.1)</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年04月24日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1,422 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+    
+  </div>
+  <article>
+    <hr>
+<p><strong>只包括div1的B和C的题解</strong></p>
+<p><a href="https://codeforces.com/contest/1340" target="_blank" rel="noopener">传送门</a></p>
+<a id="more"></a>
+
+<p>题解比较简单 我也不写题意了 直接写思路</p>
+<p>而且因为div2ABC大家都过了我就不献丑了，直接从2D1B开始 </p>
+<p><a href="https://codeforces.ml/contest/1340/problem/B" target="_blank" rel="noopener">B.Nastya and Scoreboard</a></p>
+<p>可以发现n只有2000 考虑DP，同时又能发现 因为越前面的数字对全局的影响越大，所以肯定要贪心求前面最大的数。因此思路就是 DP预处理+贪心</p>
+<p>DP预处理的是：当前我在i这个位置，剩余k0根木棍，选了j（0&lt;=j&lt;=9)这个数字，那么我接下来能否用剩下的木棍（k0-选了j需要的木棍)使剩下的位置满足题目的要求。</p>
+<p>DPi,j表示从当前的i到最后的n，能否用j根木棍满足题目要求</p>
+<p>转移方式：从n到1遍历，再从0到k遍历，再遍历0到9，看能否由dp i+1,j转移过来</p>
+<p>如果可以就标记1 </p>
+<p>最后贪心从头到尾遍历即可</p>
+<p>Code</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+int dp[2020][2020];
+int dig[10]={119,18,93,91,58,107,111,82,127,123};
+int gun[10]={6,2,5,5,4,5,6,3,7,6};
+int a[2020],sum[2020];char ch[10];
+void cal(int j){ int now=1;int ans=0,cnt=0;
+    for(int i=6;i&gt;=0;i--){
+        if(ch[i]==&#39;1&#39;) ans+=now,cnt++;now*=2;
+    }sum[j]=cnt;a[j]=ans;
+}int main(){
+    int n,k;scanf(&quot;%d%d&quot;,&amp;n,&amp;k);
+    for(int i=1;i&lt;=n;i++){
+        scanf(&quot;%s&quot;,ch);cal(i);
+    }dp[n+1][0]=1;
+    for(int i=n;i&gt;=1;i--){
+        for(int j=0;j&lt;=k;j++){ if(!dp[i+1][j]) continue;
+            for(int q=0;q&lt;=9;q++){
+                if(a[i]&lt;=dig[q]&amp;&amp;((a[i]&amp;dig[q])==a[i])){
+                    if(j+gun[q]-sum[i]&lt;=k) dp[i][j+gun[q]-sum[i]]=1;
+                }
+            }
+        }
+    }int now=0,flag=0;
+    for(int i=1;i&lt;=n;i++){
+        for(int q=9;q&gt;=0;q--){
+            if(a[i]&lt;=dig[q]&amp;&amp;((a[i]&amp;dig[q])==a[i])){
+                if(dp[i+1][k-now-(gun[q]-sum[i])]){
+                    flag=1;printf(&quot;%d&quot;,q);now+=gun[q]-sum[i];break;
+                }
+            }
+        }if(!flag) return printf(&quot;-1&quot;),0;
+    }
+}</code></pre>
+<p><a href="https://codeforces.ml/contest/1340/problem/C" target="_blank" rel="noopener">C.Nastya and Unexpected Guest</a></p>
+<p>这是一道DP+图论题</p>
+<p>先对m数组排个序，因为题目给的数据不一定有序 </p>
+<p>首先我们可以发现 m范围是1e4 g范围是1e3 所以可以想到dp</p>
+<p>dp i,j表示的是当前在第i个点,绿灯还剩j秒时的最短时间</p>
+<p>因为是最短时间，所以这就类似于最短路的思想</p>
+<p>所以转移的方式是 一个点可以向它的左边或者右边走，比如3可以走到0或7，7可以走到3或者14 边界点特判一下。</p>
+<p>然后既然是最短路 那转移的时候可以用类似dijkstra的思想 </p>
+<p>其中dpij的值的意思是 当前经过的周期，比如dpij=<strong>1</strong> 代表到了这个状态经过了<strong>1</strong>个（绿灯+红灯）的时间</p>
+<p>但是我们能发现 dijkstra的复杂度不满足题目的要求 因为题目中光状态就有1e7个 会TLE</p>
+<p>然后我们又发现，转移的时候要么在当前绿灯的范围内，要么到了下一个绿灯的周期中，所以dp的值在转移的时候要么不变要么加一，这时候我们就可以用双端队列代替dij中的优先队列，如果不变，那么push进头部，如果+1，push进尾部，这样也可以保证整个队列是有序的</p>
+<p>最后枚举最终状态里的绿灯剩余时间，算最小值</p>
+<p>（如果有哪里不懂可以边看代码边理解qwq）</p>
+<p>Code</p>
+<p>//其中 deque是双端队列</p>
+<p>下文还会给出dijkstra优先队列优化的写法，<del>如果不知道的话可以参考一下</del>，大家应该都会吧嘤嘤嘤</p>
+<pre><code class="cpp">#include&lt;bits/stdc++.h&gt;
+#define pii pair&lt;int,int&gt;
+#define fi first
+#define sc second
+using namespace std;
+typedef long long ll;
+const int maxn=1e4+5;
+const int maxe=1e3+5;
+int a[maxn];int dp[maxn][maxe];
+int main(){
+    int n,m;scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+    for(int i=1;i&lt;=m;i++) scanf(&quot;%d&quot;,&amp;a[i]);
+    sort(a+1,a+m+1);int g,r;scanf(&quot;%d%d&quot;,&amp;g,&amp;r);
+    for(int i=1;i&lt;=m;i++){
+        for(int j=0;j&lt;=g;j++) dp[i][j]=1e9;
+    }dp[1][g]=0;deque&lt;pii&gt;q;q.push_front({1,g});
+    while(!q.empty()){
+        pii now=q.front();q.pop_front();
+        int i=now.fi,rem=now.sc;
+        if(i&gt;1){ int dis=a[i]-a[i-1];
+            if(dis&lt;rem){
+                if(dp[i-1][rem-dis]&gt;dp[i][rem]){
+                    dp[i-1][rem-dis]=dp[i][rem];q.push_front({i-1,rem-dis});
+                }
+            }else if(dis==rem){
+                if(dp[i-1][g]&gt;dp[i][rem]+1){
+                    dp[i-1][g]=dp[i][rem]+1;q.push_back({i-1,g});
+                }
+            }
+        }if(i&lt;m){
+            int dis=a[i+1]-a[i];
+            if(dis&lt;rem){
+                if(dp[i+1][rem-dis]&gt;dp[i][rem]){
+                    dp[i+1][rem-dis]=dp[i][rem];q.push_front({i+1,rem-dis});
+                }
+            }else if(dis==rem){
+                if(dp[i+1][g]&gt;dp[i][rem]+1){
+                    dp[i+1][g]=dp[i][rem]+1;q.push_back({i+1,g});
+                }
+            }
+        }
+    }ll ans=1e18;
+    for(int i=1;i&lt;g;i++){
+        if(dp[m][i]!=1e9) ans=min(ans,1ll*dp[m][i]*(g+r)+g-i);
+    }if(dp[m][g]!=1e9) ans=min(ans,1ll*dp[m][g]*(g+r)-r);
+    if(ans==1e18) printf(&quot;-1&quot;);else printf(&quot;%lld\n&quot;,ans);
+}</code></pre>
+<pre><code class="cpp">//dij优先队列 nlogn
+#include&lt;bits/stdc++.h&gt;
+#define pii pair&lt;int,ll&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=2e5+50;
+const ll INF=1e10;
+int vis[maxn],path[maxn];
+ll dis[maxn];
+vector&lt;pii&gt;g[maxn];
+int n,m;
+void dijkstra(int s){
+    for(int i=1;i&lt;=n;i++){
+        dis[i]=INF;path[i]=-1;
+    }dis[s]=0;
+    priority_queue&lt;pii,vector&lt;pii&gt;,greater&lt;pii&gt; &gt;q;
+    q.push(make_pair(0,s));
+    while(!q.empty()){
+        int now=q.top().second;q.pop();
+        if(vis[now]) continue;vis[now]=1;
+        for(int i=0;i&lt;g[now].size();i++){
+            int e=g[now][i].first;ll c=g[now][i].second;
+            if(dis[e]&gt;dis[now]+c){
+                dis[e]=dis[now]+c;
+                q.push(make_pair(dis[e],e));
+                path[e]=now;
+            }
+        }
+    }
+}int main(){
+    int s;
+    scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;s);
+    for(int i=1;i&lt;=m;i++){
+        int a,b;ll c;
+        scanf(&quot;%d%d%lld&quot;,&amp;a,&amp;b,&amp;c);
+        g[a].push_back(make_pair(b,c));
+    }dijkstra(s);
+    for(int i=0;i&lt;n;i++){
+        printf(&quot;%d %lld:&quot;,i+1,dis[i+1]);
+        int now=i+1;
+        while(path[now]!=-1) printf(&quot;%d &quot;,path[now]),now=path[now];
+        printf(&quot;\n&quot;);
+    }
+}</code></pre>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>Author：</strong>西瓜喵喵.<br>
+<strong>Link：</strong><a href="/https/:ForgGYLH.github.io/2020/04/24/cf637%20-%20%E5%89%AF%E6%9C%AC/" title="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;04&#x2F;24&#x2F;cf637%20-%20%E5%89%AF%E6%9C%AC&#x2F;" target="_blank" rel="noopener">https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;2020&#x2F;04&#x2F;24&#x2F;cf637%20-%20%E5%89%AF%E6%9C%AC&#x2F;</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1591768701334"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>
