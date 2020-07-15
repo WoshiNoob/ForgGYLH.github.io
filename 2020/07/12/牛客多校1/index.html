@@ -84,16 +84,229 @@
         </div>
         <div class="post-toc" id="post-toc">
     <strong class="post-toc-title">目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-B-Suffix-Array"><span class="toc-text">A. B-Suffix Array</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路："><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Infinite-Tree"><span class="toc-text">B. Infinite Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-1"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-Domino"><span class="toc-text">C. Domino</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-2"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-Quadratic-Form"><span class="toc-text">D. Quadratic Form</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#大致题意："><span class="toc-text">大致题意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-3"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-Counting-Spanning-Trees"><span class="toc-text">E. Counting Spanning Trees</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-4"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F-Infinite-String-Comparision"><span class="toc-text">F. Infinite String Comparision</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#大致题意：-1"><span class="toc-text">大致题意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-5"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#G-BaXianGuoHai-GeXianShenTong"><span class="toc-text">G. BaXianGuoHai,GeXianShenTong</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-6"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#H-Minmum-cost-Flow"><span class="toc-text">H. Minmum-cost Flow</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-7"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#I-1-or-2"><span class="toc-text">I. 1 or 2</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-8"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#J-Easy-Integration"><span class="toc-text">J. Easy Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路：-9"><span class="toc-text">解题思路：</span></a></li></ol></li></ol></li></ol>
     <div class="back-to-top" id="back-to-top">
         <a href="javascript:void(0);">回到顶部</a>
     </div>
 </div>
         <div class="post-content">
             <hr>
-<p>Solved:2/10;  Upsolved:4/10;</p>
+<p>Solved:2/10;  Upsolved:6/10;</p>
 <a id="more"></a>
 
+<h2 id="A-B-Suffix-Array"><a href="#A-B-Suffix-Array" class="headerlink" title="A. B-Suffix Array"></a>A. B-Suffix Array</h2><p>Waiting for Solve…..</p>
+<h4 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h4><p>​    </p>
+<pre><code class="c++"></code></pre>
+<h2 id="B-Infinite-Tree"><a href="#B-Infinite-Tree" class="headerlink" title="B. Infinite Tree"></a>B. Infinite Tree</h2><h4 id="解题思路：-1"><a href="#解题思路：-1" class="headerlink" title="解题思路："></a>解题思路：</h4><p>​    对于1到m的阶乘，求出包含它们以及它们LCA的虚树，具体实现过程中dfs序用dep深度代替，然后求LCA需要用到树状数组。建完虚树后就是简单的树形dp。</p>
+<pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=5e5+50;
+int w[maxn],T[maxn],n;
+vector&lt;int&gt;pri[maxn],g[maxn];
+int h[maxn],st[maxn];
+ll dp[maxn],son[maxn],wsum;
+void add(int k,int v){for(;k&lt;=n;k+=k&amp;-k) T[k]+=v;}
+int qsum(int k){int ans=0;for(;k;k-=k&amp;-k) ans+=T[k];return ans;}
+void dfs1(int u,int f){
+    for(auto v:g[u]){
+        if(v==f) continue;
+        dfs1(v,u);son[u]+=son[v];
+    }if(u&lt;=n) son[u]+=w[u];
+}void dfs2(int u,int f){
+    for(auto v:g[u]){
+        if(v==f) continue;
+        dp[v]=dp[u]+1ll*(h[v]-h[u])*(wsum-2ll*son[v]);dfs2(v,u);
+    }
+}int cmp(int a,int b){
+    return a&gt;b;
+}
+int main(){
+    //freopen(&quot;in.txt&quot;,&quot;r&quot;,stdin);
+    for(int i=2;i&lt;=1e5;i++){ int a=i;
+        for(int j=2;j*j&lt;=a;j++){
+            while(a%j==0){
+                a/=j;pri[i].push_back(j);
+            }
+        }if(a&gt;1) pri[i].push_back(a);
+        sort(pri[i].begin(),pri[i].end(),cmp);
+    }while(scanf(&quot;%d&quot;,&amp;n)!=EOF){ wsum=0,dp[1]=0;
+        for(int i=1;i&lt;=2*n;i++) g[i].clear(),son[i]=0,T[i]=0;
+        for(int i=1;i&lt;=n;i++) scanf(&quot;%d&quot;,&amp;w[i]),wsum+=w[i];
+        int top=0,cnt=n;st[++top]=1;
+        for(int i=2;i&lt;=n;i++){
+            int lca=h[i-1]-qsum(pri[i][0]-1);
+            if(lca!=h[st[top]]){
+                while(top&gt;1&amp;&amp;h[st[top-1]]&gt;=lca){
+                    int x=st[top-1],y=st[top];top--;
+                    g[x].push_back(y);g[y].push_back(x);
+                }if(top&gt;1&amp;&amp;h[st[top-1]]&lt;lca){
+                    int x=st[top];h[++cnt]=lca;
+                    g[cnt].push_back(x);g[x].push_back(cnt);
+                    st[top]=cnt; 
+                }
+            }st[++top]=i;h[i]=h[i-1]+pri[i].size();
+            for(int j=0;j&lt;pri[i].size();j++){
+                add(pri[i][j],1);
+            }
+        }while(top&gt;1){
+            int x=st[top-1],y=st[top];top--;
+            g[x].push_back(y);g[y].push_back(x);
+        }dfs1(1,0);for(int i=1;i&lt;=n;i++) dp[1]+=1ll*h[i]*w[i];
+        dfs2(1,0);ll ans=dp[1];
+        for(int i=2;i&lt;=cnt;i++){
+            ans=min(ans,dp[i]);
+        }printf(&quot;%lld\n&quot;,ans);
+    }
+}</code></pre>
+<h2 id="C-Domino"><a href="#C-Domino" class="headerlink" title="C. Domino"></a>C. Domino</h2><p>​    给定约束条件$\sum_{i=1}^n\sum_{j=1}^nA_{i,j}x_ix_j\leq1$，使得$\sum_{i=1}^nb_ix_i$最小，求$(\sum_{i=1}^nb_ix_i)^2$的值。（A，b已知，x未知，答案为分数形式对998244353取模）</p>
+<p>Waiting for Solve…..</p>
+<h4 id="解题思路：-2"><a href="#解题思路：-2" class="headerlink" title="解题思路："></a>解题思路：</h4><pre><code class="c++"></code></pre>
+<h2 id="D-Quadratic-Form"><a href="#D-Quadratic-Form" class="headerlink" title="D. Quadratic Form"></a>D. Quadratic Form</h2><h4 id="大致题意："><a href="#大致题意：" class="headerlink" title="大致题意："></a>大致题意：</h4><p>​    给定约束条件$\sum_{i=1}^n\sum_{j=1}^nA_{i,j}x_ix_j\leq1$，使得$\sum_{i=1}^nb_ix_i$最小，求$(\sum_{i=1}^nb_ix_i)^2$的值。（A，b已知，x未知，答案为分数形式对998244353取模）</p>
+<h4 id="解题思路：-3"><a href="#解题思路：-3" class="headerlink" title="解题思路："></a>解题思路：</h4><p>​    不等式约束优化问题，用拉格朗日乘数法列出KKT方程求解，原问题可化简为求$B^TA^{-1}B$,求出A矩阵的逆矩阵即可。</p>
+<pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+#define rd(a) scanf(&quot;%d&quot;,&amp;a)
+#define rep(i,a,b) for(int i=(a);i&lt;=(b);i++)
+#define rev(i,a,b) for(int i=(a);i&gt;=(b);i--)
+using namespace std;
+typedef long long ll;
+const int inf=1ll&lt;&lt;30;
+const int N=400+5;
+const int mod=998244353;
+ll qpow(ll a, int b){
+    ll res=1;
+    for(;b;b&gt;&gt;=1,a=a*a%mod){
+        if(b&amp;1)res=res*a%mod;
+    }
+    return res;
+}
+ll A[N][N],b[N];
+ll Gauss_Jordan(int n,int m) {
+    ll r=1;
+    for(int i=1; i&lt;=n; i++) {
+        int row=i;
+        for(; row&lt;=n; row++)if(A[row][i])break;
+        if(row&gt;n)continue;
+        if(row!=i) {
+            for(int j=1; j&lt;=m; j++)swap(A[i][j],A[row][j]);
+            r=(mod-r)%mod;
+        }
+        r=r*A[i][i]%mod;
+        ll t=qpow(A[i][i],mod-2);
+        for(int j=1; j&lt;=m; j++)A[i][j]=A[i][j]*t%mod;
+        for(int j=1; j&lt;=n; j++)
+            if(j!=i) {
+                t=A[j][i];
+                for(int k=1; k&lt;=m; k++)A[j][k]=(A[j][k]-t*A[i][k]%mod+mod)%mod;
+            }
+    }
+    return r;
+}
+int n;
+int main(){
+    while(~scanf(&quot;%d&quot;,&amp;n)){
+        for(int i=1;i&lt;=n;i++){
+            for(int j=1;j&lt;=n;j++){
+                scanf(&quot;%lld&quot;,&amp;A[i][j]);
+                A[i][j]=(A[i][j]+mod)%mod;
+                A[i][j+n]=i==j;
+            }
+        }
+        Gauss_Jordan(n,n&lt;&lt;1);
+        for(int i=1;i&lt;=n;i++){
+            scanf(&quot;%lld&quot;,&amp;b[i]);
+            b[i]=(b[i]+mod)%mod;
+        }
+        ll ans=0;
+        for(int i=1;i&lt;=n;i++){
+            ll sum=0;
+            for(int j=1;j&lt;=n;j++){
+                sum+=A[j][i+n]*b[j]%mod;
+                sum%=mod;
+            }
+            ans+=sum*b[i]%mod;
+            ans%=mod;
+        }
+        printf(&quot;%lld\n&quot;,ans);
+    }
+    return 0;
+}</code></pre>
+<h2 id="E-Counting-Spanning-Trees"><a href="#E-Counting-Spanning-Trees" class="headerlink" title="E. Counting Spanning Trees"></a>E. Counting Spanning Trees</h2><p>Waiting for Solve…..</p>
+<h4 id="解题思路：-4"><a href="#解题思路：-4" class="headerlink" title="解题思路："></a>解题思路：</h4><pre><code class="c++"></code></pre>
+<h2 id="F-Infinite-String-Comparision"><a href="#F-Infinite-String-Comparision" class="headerlink" title="F. Infinite String Comparision"></a>F. Infinite String Comparision</h2><h4 id="大致题意：-1"><a href="#大致题意：-1" class="headerlink" title="大致题意："></a>大致题意：</h4><p>​    给定约束条件$\sum_{i=1}^n\sum_{j=1}^nA_{i,j}x_ix_j\leq1$，使得$\sum_{i=1}^nb_ix_i$最小，求$(\sum_{i=1}^nb_ix_i)^2$的值。（A，b已知，x未知，答案为分数形式对998244353取模）</p>
+<h4 id="解题思路：-5"><a href="#解题思路：-5" class="headerlink" title="解题思路："></a>解题思路：</h4><p>​    不等式约束优化问题，用拉格朗日乘数法列出KKT方程求解，原问题可化简为求$B^TA^{-1}B$,求出A矩阵的逆矩阵即可。</p>
+<pre><code class="c++">#include&lt;bits/stdc++.h&gt;
+#define rd(a) scanf(&quot;%d&quot;,&amp;a)
+#define rep(i,a,b) for(int i=(a);i&lt;=(b);i++)
+#define rev(i,a,b) for(int i=(a);i&gt;=(b);i--)
+using namespace std;
+typedef long long ll;
+const int inf=1ll&lt;&lt;30;
+const int N=400+5;
+const int mod=998244353;
+ll qpow(ll a, int b){
+    ll res=1;
+    for(;b;b&gt;&gt;=1,a=a*a%mod){
+        if(b&amp;1)res=res*a%mod;
+    }
+    return res;
+}
+ll A[N][N],b[N];
+ll Gauss_Jordan(int n,int m) {
+    ll r=1;
+    for(int i=1; i&lt;=n; i++) {
+        int row=i;
+        for(; row&lt;=n; row++)if(A[row][i])break;
+        if(row&gt;n)continue;
+        if(row!=i) {
+            for(int j=1; j&lt;=m; j++)swap(A[i][j],A[row][j]);
+            r=(mod-r)%mod;
+        }
+        r=r*A[i][i]%mod;
+        ll t=qpow(A[i][i],mod-2);
+        for(int j=1; j&lt;=m; j++)A[i][j]=A[i][j]*t%mod;
+        for(int j=1; j&lt;=n; j++)
+            if(j!=i) {
+                t=A[j][i];
+                for(int k=1; k&lt;=m; k++)A[j][k]=(A[j][k]-t*A[i][k]%mod+mod)%mod;
+            }
+    }
+    return r;
+}
+int n;
+int main(){
+    while(~scanf(&quot;%d&quot;,&amp;n)){
+        for(int i=1;i&lt;=n;i++){
+            for(int j=1;j&lt;=n;j++){
+                scanf(&quot;%lld&quot;,&amp;A[i][j]);
+                A[i][j]=(A[i][j]+mod)%mod;
+                A[i][j+n]=i==j;
+            }
+        }
+        Gauss_Jordan(n,n&lt;&lt;1);
+        for(int i=1;i&lt;=n;i++){
+            scanf(&quot;%lld&quot;,&amp;b[i]);
+            b[i]=(b[i]+mod)%mod;
+        }
+        ll ans=0;
+        for(int i=1;i&lt;=n;i++){
+            ll sum=0;
+            for(int j=1;j&lt;=n;j++){
+                sum+=A[j][i+n]*b[j]%mod;
+                sum%=mod;
+            }
+            ans+=sum*b[i]%mod;
+            ans%=mod;
+        }
+        printf(&quot;%lld\n&quot;,ans);
+    }
+    return 0;
+}</code></pre>
+<h2 id="G-BaXianGuoHai-GeXianShenTong"><a href="#G-BaXianGuoHai-GeXianShenTong" class="headerlink" title="G. BaXianGuoHai,GeXianShenTong"></a>G. BaXianGuoHai,GeXianShenTong</h2><p>Waiting for Solve…..</p>
+<h4 id="解题思路：-6"><a href="#解题思路：-6" class="headerlink" title="解题思路："></a>解题思路：</h4><pre><code class="c++"></code></pre>
+<h2 id="H-Minmum-cost-Flow"><a href="#H-Minmum-cost-Flow" class="headerlink" title="H. Minmum-cost Flow"></a>H. Minmum-cost Flow</h2><h4 id="解题思路：-7"><a href="#解题思路：-7" class="headerlink" title="解题思路："></a>解题思路：</h4><pre><code class="c++"></code></pre>
+<h2 id="I-1-or-2"><a href="#I-1-or-2" class="headerlink" title="I. 1 or 2"></a>I. 1 or 2</h2><h4 id="解题思路：-8"><a href="#解题思路：-8" class="headerlink" title="解题思路："></a>解题思路：</h4><pre><code class="c++"></code></pre>
+<h2 id="J-Easy-Integration"><a href="#J-Easy-Integration" class="headerlink" title="J. Easy Integration"></a>J. Easy Integration</h2><h4 id="解题思路：-9"><a href="#解题思路：-9" class="headerlink" title="解题思路："></a>解题思路：</h4><pre><code class="c++"></code></pre>
 
         </div>
         
