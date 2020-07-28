@@ -1,235 +1,328 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  
-  <title>Tags：题解 - 我们都有光明的前途</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="Hachi赛高">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-
-  <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="Hachi赛高">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我们都有光明的前途">
-<meta property="og:url" content="https&#x2F;&#x2F;:ForgGYLH.github.io&#x2F;tags&#x2F;%E9%A2%98%E8%A7%A3&#x2F;page&#x2F;2&#x2F;index.html">
-<meta property="og:site_name" content="我们都有光明的前途">
-<meta property="og:description" content="Hachi赛高">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  
-  
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1591769207454">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>我们都有光明的前途</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
 </head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
 
-<body class="mdui-drawer-body-left">
-  
-  <div id="nexmoe-background">
-    <div class="nexmoe-bg" style="background-image: url(/images/andreas-rocha-magichour01.jpg)"></div>
-    <div class="mdui-appbar mdui-shadow-0">
-      <div class="mdui-toolbar">
-        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
-        <div class="mdui-toolbar-spacer"></div>
-        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
-        <a href="/" title="西瓜喵喵." class="mdui-btn mdui-btn-icon"><img src="/images/head.jpg"></a>
-       </div>
-    </div>
-  </div>
-  <div id="nexmoe-header">
-      <div class="nexmoe-drawer mdui-drawer" id="drawer">
-    <div class="nexmoe-avatar mdui-ripple">
-        <a href="/" title="西瓜喵喵.">
-            <img src="/images/head.jpg" alt="西瓜喵喵.">
-        </a>
-    </div>
-    <div class="nexmoe-count">
-        <div><span>Articles</span>12</div>
-        <div><span>Tags</span>2</div>
-        <div><span>Categories</span>0</div>
-    </div>
-    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
-            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
-            <div class="mdui-list-item-content">
-                回到首页
-            </div>
-        </a>
-        
-        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/PY.html" title="我的朋友">
-            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
-            <div class="mdui-list-item-content">
-                我的朋友
-            </div>
-        </a>
-        
-    </ul>
-    <aside id="nexmoe-sidebar">
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Social</h3>
-    <div class="nexmoe-widget nexmoe-social">
-        <a class="mdui-ripple" href="https://space.bilibili.com/2671065" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
-            <i class="nexmoefont icon-bilibili"></i>
-        </a><a class="mdui-ripple" href="https://github.com/WoshiNoob" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
-            <i class="nexmoefont icon-github"></i>
-        </a>
-    </div>
-</div>
-  
-  
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Tag Cloud</h3>
-    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
-      <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 20px;">题解</a>
-    </div>
-    
-  </div>
-
-  
-  
-  <div class="nexmoe-widget-wrap">
-    <h3 class="nexmoe-widget-title">Archive</h3>
-    <div class="nexmoe-widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-</aside>
-    <div class="nexmoe-copyright">
-        &copy; 2020 西瓜喵喵.
-        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
-    </div>
-</div><!-- .nexmoe-drawer -->
-  </div>
-  <div id="nexmoe-content">
-    <div class="nexmoe-primary">
-        <section class="nexmoe-posts" id="brand-waterfall">
-    
-    <div class="nexmoe-post">
-        <a href="/2019/11/09/CFGraphs/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="/images/andreas-rocha-magichour01.jpg" alt="CodeForces图论刷题之路 1-1243D. 0-1 MST">
-                
-                <h1>CodeForces图论刷题之路 1-1243D. 0-1 MST</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月09日</a>
-            <a><i class="nexmoefont icon-areachart"></i>427 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-            
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
-            
         </div>
-        <article>
+        <nav class="header-nav">
             
-            <p>发现自己图论菜的一 所以开始疯狂刷图论题。这是一道看似最小生成树实则是求补图连通块个数的题。</p>
+            <a href="/" class="header-nav-link" >
+                Home
+            </a>
             
-        </article>
+
+            
+            <a href="/archives" class="header-nav-link">
+                Archives
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                Tags
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">FlaMingo's Training Record.'s Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">Home</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">Archives</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">Tags</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <section class="archive">
+    
+    <div class="archive-title tag">
+        <h2 class="archive-name">题解</h2>
     </div>
     
-    <div class="nexmoe-post">
-        <a href="/2019/11/05/CF1256b-Minimize%20the%20Permutation%E9%A2%98%E8%A7%A3/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="/images/andreas-rocha-magichour01.jpg" alt="CF1256B-Minimize the Permutation题解">
-                
-                <h1>CF1256B-Minimize the Permutation题解</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月05日</a>
-            <a><i class="nexmoefont icon-areachart"></i>386 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-            
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
-            
-        </div>
-        <article>
-            
-            <p>这道题。。比赛时候甚至写炸了 555 我太菜了</p>
-            
-        </article>
-    </div>
+
     
-    <div class="nexmoe-post">
-        <a href="/2019/11/04/LuoGuP1470%E3%80%90%E6%9C%80%E9%95%BF%E5%89%8D%E7%BC%80LongestPrefix%E3%80%91/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
+    
+        
+            
+            
                 
-                    <img src="/images/andreas-rocha-magichour01.jpg" alt="LuoGuP1470【最长前缀LongestPrefix】">
+                    
                 
-                <h1>LuoGuP1470【最长前缀LongestPrefix】</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月04日</a>
-            <a><i class="nexmoefont icon-areachart"></i>283 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-28
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/28/%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A13/">2020 Multi-University Training Contest 3</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
             
             
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
+                
+                    
+                
             
-        </div>
-        <article>
+
             
-            <p>（<del>反正题解没人看 就提供个思路吧</del>）</p>
-<p>Trie+DFS 每搜到一个节点看它是不是一个单词的终点，是就加一个搜索路径，不是就按照Trie的Find()模板进行DFS. 优化：记得加vis数组进行记忆化搜索，不然会有重复情况会TLE。</p>
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-21
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/21/%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/">2020 Multi-University Training Contest 1</a>
+                    </span>
+                </div>
             
-        </article>
-    </div>
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    9999-01-01
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/9999/01/01/FlaMingo/">FlaminGo</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-23
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/23/%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A12/">2020 Multi-University Training Contest 2</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-25
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/25/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A15/">牛客多校第五场</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-12
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/12/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A11/">牛客多校第一场</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-27
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/27/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A16/">牛客多校第六场</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-20
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/20/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A14/">牛客多校第四场</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-18
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/18/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A13/">牛客多校第三场</a>
+                    </span>
+                </div>
+            
+        
+
+    
+        
+            
+            
+                
+                    
+                
+            
+
+            
+                <div class="archive-post">
+                    <span class="archive-post-time">
+                    2020-07-13
+                    </span>
+                    <span class="archive-post-title">
+                        <a class="archive-post-link" href="/2020/07/13/%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A12/">牛客多校第二场</a>
+                    </span>
+                </div>
+            
+        
+
     
 </section>
-
-    <nav class="nexmoe-page-nav">
-      <a class="extend prev" rel="prev" href="/tags/%E9%A2%98%E8%A7%A3/">&lt;i class=&quot;nexmoefont icon-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/tags/%E9%A2%98%E8%A7%A3/">1</a><span class="page-number current">2</span>
-    </nav>
-  
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
- 
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</div>
+<footer class="footer-social">
+    
 
+    
 
- 
-    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+    
 
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script src="/js/app.js?v=1591769207456"></script>
-<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
-
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
-
-
-
-  
-
-
-
-
-
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+            2020
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">FlaMingo's Training Record.</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
 
+</script>
 </html>
